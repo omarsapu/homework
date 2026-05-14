@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  margin: 40px;
+  font-family: sans-serif;
+  font-size: 22px;
+}
+
+th,
+td,
+caption {
+  border: 1px solid black;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+caption {
+  border-bottom: none;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.red{
+  color: red;
+}
