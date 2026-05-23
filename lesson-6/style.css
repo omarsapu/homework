@@ -1,0 +1,38 @@
+html {
+  font-family: sans-serif;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  max-width: 1220px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  flex-wrap: wrap;
+}
+
+.header-logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header-list{
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
