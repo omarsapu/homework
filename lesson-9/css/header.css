@@ -1,0 +1,33 @@
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #d3cbd9;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.phone {
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: right;
+  color: #858e8a;
+}
+
+.phone-text {
+  margin-bottom: 8px;
+}
+
+.phone-link {
+  font-weight: 500;
+  font-size: 18px;
+  color: #2c332f;
+  transition: color 0.2s;
+}
+
+.phone-link:hover {
+  color: #3956ed;
+}
