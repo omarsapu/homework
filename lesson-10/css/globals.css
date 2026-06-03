@@ -29,6 +29,11 @@ a {
   text-decoration: none;
 }
 
+a,
+button {
+  outline: none;
+}
+
 .container {
   max-width: 1250px;
   margin: 0 auto;
@@ -53,11 +58,22 @@ a {
   text-align: center;
   color: #fff;
   background-color: #3596ed;
-  transition: opacity 0.3s;
+  transition:
+    opacity 0.3s,
+    background-color 0.2s;
 }
 
 .button:hover {
   opacity: 0.8;
+}
+
+.button:not(:disabled):active {
+  background-color: #1b6ebd;
+}
+
+button.button:disabled {
+  opacity: 0.65;
+  cursor: default;
 }
 
 .section {
@@ -75,6 +91,15 @@ a {
   max-width: 596px;
 }
 
+.title-medium {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 115%;
+  text-transform: uppercase;
+  color: #2c332f;
+}
+
 .text-sub {
   font-weight: 300;
   font-size: 14px;
@@ -82,4 +107,15 @@ a {
   text-transform: uppercase;
   text-align: right;
   color: #858e;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #3596ed;
+  outline-offset: 1px;
+}
+
+a:active {
+  color: #3596ed;
 }
