@@ -46,7 +46,7 @@
   content: "";
   position: absolute;
   z-index: -1;
-  background: url(../img/decor-iccon.svg)  no-repeat;
+  background: url(../img/decor-iccon.svg) no-repeat;
   width: 528px;
   height: 48px;
 }
@@ -56,7 +56,7 @@
   left: -350px;
 }
 
-.article-decor-wrapper-2::before  {
+.article-decor-wrapper-2::before {
   right: -350px;
   bottom: 136px;
 }
@@ -95,4 +95,16 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  transition:
+    opacity 0.2s,
+    background-color 0.2s;
 }
+
+.article-play-button:hover {
+  background-color: #438ac9;
+}
+
+.article-play-button:not(:disabled):active {
+  background-color: #2d82cd;
+}
+
