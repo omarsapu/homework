@@ -1,6 +1,12 @@
 .header-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 10px;
   border-bottom: 1px solid #d3cbd9;
@@ -20,6 +26,8 @@
   font-weight: 500;
   font-size: 18px;
   color: #2c332f;
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
   transition: color 0.2s;
 }
 
