@@ -4,25 +4,11 @@
   padding-bottom: 120px;
 }
 
-.article-title {
-  font-family: "Oswald", sans-serif;
-  font-weight: 600;
-  line-height: 115%;
-  text-transform: uppercase;
-  color: #2c332f;
-  margin-bottom: 40px;
-  max-width: 596px;
-}
-
-.article-title-large {
-  font-size: 48px;
-}
-
-.article-title-medium {
+.article__title-medium {
   font-size: 36px;
 }
 
-.article-text {
+.article__text {
   margin-bottom: 20px;
   font-weight: 400;
   font-size: 16px;
@@ -30,48 +16,26 @@
   color: #535755;
 }
 
-.article-mb-1 {
-  margin-bottom: 80px;
-}
-
-.article-mb-2 {
-  margin-bottom: 40px;
-}
-
-.article-decor-wrapper {
-  position: relative;
-}
-
-.article-decor-wrapper-1::before {
-  top: 100px;
-  left: 0;
-}
-
-.article-decor-wrapper-2::before {
-  right: 0;
-  bottom: 136px;
-}
-
-.article-img,
-.article-video {
+.article__img,
+.article__video {
   width: 100%;
 }
 
-.article-list {
+.article__list {
   margin-top: 0;
   padding-left: 21px;
 }
 
-.article-item {
+.article__item {
   margin-bottom: 12px;
 }
 
-.article-item::marker {
+.article__item::marker {
   color: #3596ed;
   font-size: 22px;
 }
 
-.article-play-button {
+.article__play-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -105,24 +69,24 @@
     background-color 0.2s;
 }
 
-.article-play-button:hover {
+.article__play-button:hover {
   background-color: #438ac9;
 }
 
-.article-play-button:not(:disabled):active {
+.article__play-button:not(:disabled):active {
   background-color: #2d82cd;
 }
 
 @media (width <= 768px) {
-  .article-decor-wrapper::before {
+  .decor-wrapper::before {
     display: none;
   }
 
-  .article-mb-1 {
+  .mb-1 {
     margin-bottom: 60px;
   }
 
-  .article-title-medium {
+  .article__title-medium {
     font-size: 32px;
   }
 }
@@ -133,27 +97,26 @@
     padding-bottom: 80px;
   }
 
-  .article-title-medium {
+  .article__title-medium {
     font-size: 28px;
   }
 
-  .article-mb-1 {
+  .mb-2 {
     margin-bottom: 40px;
   }
 
-  .article-mb-2 {
-    margin-bottom: 30px;
-  }
+  
 
-  .article-play-button {
+  .article__play-button {
     width: 50px;
     height: 50px;
   }
 
-  .article-play-button img {
+  .article__play-button .article__play-icon {
     width: 18px;
     height: 18px;
   }
 }
+
 
 
