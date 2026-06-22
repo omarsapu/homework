@@ -1,0 +1,150 @@
+.hero {
+  position: relative;
+}
+
+@media (width > 576px) {
+  .hero {
+    padding-bottom: 94px;
+  }
+}
+
+@media (width <= 576px) {
+  .hero {
+    padding-bottom: 80px;
+  }
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  /* min-width  375px, max-width 768px*/
+  min-height: clamp(27.063rem, 13.823rem + 56.49vw, 46.375rem);
+}
+
+@media (width > 768px) {
+  .hero__container {
+    padding-top: 60px;
+  }
+}
+
+@media (width <= 768px) and (width > 576px) {
+  .hero__container {
+    padding-top: 20px;
+  }
+}
+
+.hero__header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+@media (width > 768px) {
+  .hero__header {
+    align-items: center;
+  }
+}
+
+@media (width <= 768px) {
+  .hero__header {
+    flex-direction: column;
+  }
+}
+
+.hero__benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media (width > 768px) {
+  .hero__benefits-list {
+    position: absolute;
+    left: 0;
+  }
+}
+
+.hero__benefits-item {
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+@media (width > 768px) {
+  .hero__benefits-item {
+    font-size: 16px;
+  }
+}
+
+@media (width <= 768px) {
+  .hero__benefits-item {
+    font-size: 14px;
+  }
+}
+
+.hero__title {
+  display: flex;
+  /* min-width  375px, max-width 1920px*/
+  gap: clamp(8px, 0.09rem + 1.75vw, 35px);
+  justify-content: center;
+  font-weight: 600;
+  /* min-width  375px, max-width 1920px*/
+  font-size: clamp(48px, 1.768rem + 5.18vw, 128px);
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+.hero__title-accent {
+  color: transparent;
+}
+
+@media (width > 768px) {
+  .hero__title-accent {
+    -webkit-text-stroke: 3px var(--accent-color);
+  }
+}
+
+@media (width <= 768px) {
+  .hero__title-accent {
+    -webkit-text-stroke: 1.5px var(--accent-color);
+  }
+}
+
+.hero__img {
+  position: absolute;
+  top: 88px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--layer-negative);
+}
+
+.hero__footer {
+  padding-bottom: 20px;
+  text-align: end;
+}
+
+.hero__details {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--main-color);
+  transition: color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+  .hero__details:hover {
+    color: var(--accent-color);
+  }
+}
+
+.hero__details-icon {
+  stroke: currentColor;
+}

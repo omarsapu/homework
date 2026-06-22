@@ -7,7 +7,10 @@
 .page__body {
   min-width: 375px;
   background-color: var(--bg-color);
-  height: 190vw;
+}
+
+.page__body--no-scroll {
+  overflow-y: hidden;
 }
 
 .container {
@@ -15,11 +18,12 @@
   margin-inline: auto;
 }
 
-.page__body--no-scroll{
-  overflow-y: hidden;
-}
-
-a:focus-visible, button:focus-visible{
+a:focus-visible,
+button:focus-visible {
   outline: 1px solid var(--accent-color);
   outline-offset: 2px;
 }
+
+/* .main {
+  padding-top: 60px;
+} */

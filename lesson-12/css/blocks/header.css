@@ -3,6 +3,7 @@
   top: 0;
   right: 0;
   left: 0;
+  z-index: var(--layer-1);
   padding-block: 32px;
   transition: box-shadow var(--transition-time);
   background-color: var(--bg-color);
