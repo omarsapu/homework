@@ -2,11 +2,12 @@
   font-family: var(--font-family);
   font-weight: 400;
   color: var(--main-color);
+  scroll-behavior: smooth;
+  scroll-padding-top: 98px;
 }
 
 .page__body {
   min-width: 375px;
-  
   background-color: var(--bg-color);
 }
 
@@ -19,12 +20,35 @@
   margin-inline: auto;
 }
 
+img {
+  object-fit: cover;
+}
+
 a:focus-visible,
 button:focus-visible {
   outline: 1px solid var(--accent-color);
   outline-offset: 2px;
 }
 
-/* .main {
-  padding-top: 60px;
-} */
+.text-regular,
+.text-light {
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--main-color);
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.title-md {
+  font-weight: 600;
+  /* min-width 375px, max-width 992px */
+  font-size: clamp(32px, 0.936rem + 4.54vw, 60px);
+  text-transform: uppercase;
+  color: var(--main-color);
+}
