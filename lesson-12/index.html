@@ -5,15 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/index.css" />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <link
       rel="shortcut icon"
       href="./icons/nike-favicon-48x48.ico"
       type="image/x-icon"
     />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
+      defer
+    ></script>
+
     <script src="./js/index.js" type="module"></script>
+
     <title>Nike Air Mag</title>
   </head>
   <body class="page__body">
-
     <header class="header">
       <div class="container header__container">
         <a href="#" class="logo header__logo">
@@ -26,7 +37,11 @@
           />
         </a>
 
-        <nav class="menu header__menu" id="header__menu" aria-label=Главное меню">
+        <nav
+          class="menu header__menu"
+          id="header__menu"
+          aria-label="Главное меню"
+        >
           <ul class="menu__list">
             <li class="menu__item">
               <a href="#air-mag" class="menu__link" lang="en">Air Mag</a>
@@ -46,23 +61,48 @@
         <div class="header__controls">
           <a href="#" class="header__order">Сделать заказ</a>
           <div class="header__actions">
-            <button class="header__actions-button" title="Поиск" aria-label="Поиск">
+            <button
+              class="header__actions-button"
+              title="Поиск"
+              aria-label="Поиск"
+            >
               <svg width="24" height="24">
-                <use class="header__actions-icon" href="./icons/sprite.svg#search"></use>
+                <use
+                  class="header__actions-icon"
+                  href="./icons/sprite.svg#search"
+                ></use>
               </svg>
             </button>
 
-            <button class="header__actions-button" title="Корзина" aria-label="Корзина">
+            <button
+              class="header__actions-button"
+              title="Корзина"
+              aria-label="Корзина"
+            >
               <svg width="24" height="24">
-                <use class="header__actions-icon" href="./icons/sprite.svg#cart"></use>
+                <use
+                  class="header__actions-icon"
+                  href="./icons/sprite.svg#cart"
+                ></use>
               </svg>
             </button>
 
-            <button class="header__burger burger"  aria-label="Открыть меню" aria-expanded="false" aria-controls="header__menu">
+            <button
+              class="header__burger burger"
+              aria-label="Открыть меню"
+              aria-expanded="false"
+              aria-controls="header__menu"
+            >
               <svg width="24" height="24">
-                <use class="burger__icon-menu" href="./icons/sprite.svg#menu-burger"></use>
+                <use
+                  class="burger__icon-menu"
+                  href="./icons/sprite.svg#menu-burger"
+                ></use>
 
-                <use class="burger__icon-cross" href="./icons/sprite.svg#menu-cross"></use>
+                <use
+                  class="burger__icon-cross"
+                  href="./icons/sprite.svg#menu-cross"
+                ></use>
               </svg>
             </button>
           </div>
@@ -73,24 +113,34 @@
     <main class="main">
       <section class="hero">
         <div class="container hero__container">
-
-          <header class=" hero__header">
+          <header class="hero__header">
             <ul class="hero__benefits-list">
               <li class="hero__benefits-item">Стиль</li>
               <li class="hero__benefits-item">Скорость</li>
             </ul>
-            <h1 class="hero__title">Nike <span class="hero__title-accent">air</span> mag</h1>
+            <h1 class="hero__title">
+              Nike <span class="hero__title-accent">air</span> mag
+            </h1>
           </header>
           <picture>
-            <source srcset="./img/nike-air-mag-1.webp" type="image/webp">
-            <img src="./img/nike-air-mag1.png" width="846" height="713" alt="Кроссовок NIke Air Mag с желтым кольцом под подошвой" class="hero__img">
+            <source srcset="./img/nike-air-mag-1.webp" type="image/webp" />
+            <img
+              src="./img/nike-air-mag1.png"
+              width="846"
+              height="713"
+              alt="Кроссовок NIke Air Mag с желтым кольцом под подошвой"
+              class="hero__img"
+            />
           </picture>
 
           <footer class="hero__footer">
             <a href="#" class="hero__details">
-              Подробнее 
+              Подробнее
               <svg width="24" height="24">
-                <use class="hero__details-icon" href="./icons/main-sprite.svg#arrow-right"></use>
+                <use
+                  class="hero__details-icon"
+                  href="./icons/main-sprite.svg#arrow-right"
+                ></use>
               </svg>
             </a>
           </footer>
@@ -100,22 +150,122 @@
       <section id="air-mag" class="air-mag">
         <div class="container">
           <h2 class="air-mag__title title-md">Air Mag</h2>
-          <p class="air-mag__description text-regular">Это не просто кроссовки — это шаг в будущее. С уникальным дизайном и передовыми технологиями, эти кроссовки вдохновлены легендарной киноделией и готовы сопровождать вас в любых приключениях.
+          <p class="air-mag__description text-regular">
+            Это не просто кроссовки — это шаг в будущее. С уникальным дизайном и
+            передовыми технологиями, эти кроссовки вдохновлены легендарной
+            киноделией и готовы сопровождать вас в любых приключениях.
           </p>
 
           <div class="air-mag__info-wrapper">
             <picture>
-              <source srcset="./img/nike-air-mag-2.webp" type="image/webp">
-              <img class="air-mag__img" src="./img/nike-air-mag2.png" width="911" height="635" loading="lazy" alt="Кроссовки Nike Air Mag с жёлтым кольцом вокруг">
+              <source srcset="./img/nike-air-mag-2.webp" type="image/webp" />
+              <img
+                class="air-mag__img"
+                src="./img/nike-air-mag2.png"
+                width="911"
+                height="635"
+                loading="lazy"
+                alt="Кроссовки Nike Air Mag с жёлтым кольцом вокруг"
+              />
             </picture>
 
             <ul class="air-mag__info-list text-light">
-              <li class="air-mag__info-item">инновационная технология амортизации, которая обеспечивает непревзойденную поддержу суставов
+              <li class="air-mag__info-item">
+                инновационная технология амортизации, которая обеспечивает
+                непревзойденную поддержу суставов
               </li>
 
-              <li class="air-mag__info-item">высококачественные синтетические материалы для долговечности и комфорта
+              <li class="air-mag__info-item">
+                высококачественные синтетические материалы для долговечности
+                и комфорта
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="sizes" class="sizes section">
+        <div class="container">
+          <h2 class="sizes__title title-md section-title">Размеры</h2>
+          <div class="sizes__slider-wrapper">
+            <button
+              class="sizes__slider-button sizes__slider-button--prev"
+              aria-label="Предыдущий слайд"
+            >
+              <svg width="40" height="40">
+                <use
+                  class="sizes__slider-button-icon"
+                  href="./icons/main-sprite.svg#double-arrow"
+                ></use>
+              </svg>
+            </button>
+
+            <div class="swiper sizes__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="sizes__slide-inner">
+                    <picture>
+                      <source
+                        srcset="./img/sizes-slider/sizes-slider-air-mag1.webp"
+                      />
+                      <img 
+                        src="./img/sizes-slider/sizes-slider-air-mag1.png"
+                        class="sizes__slide-img"
+                        width="357"
+                        height="375"
+                        alt="Кроссовки Nike Air Mag, вид спереди"
+                      />
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="sizes__slide-inner">
+                    <picture>
+                      <source
+                        srcset="./img/sizes-slider/sizes-slider-air-mag2.webp"
+                      />
+                      <img
+                        src="./img/sizes-slider/sizes-slider-air-mag2.png"
+                        class="sizes__slide-img"
+                        width="408"
+                        height="375"
+                        alt="Кроссовки Nike Air Mag, вид сзади"
+                      />
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="sizes__slide-inner">
+                    <picture>
+                      <source
+                        srcset="./img/sizes-slider/sizes-slider-air-mag3.webp"
+                      />
+                      <img
+                        src="./img/sizes-slider/sizes-slider-air-mag3.png"
+                        class="sizes__slide-img"
+                        width="442"
+                        height="375"
+                        alt="Кроссовки Nike Air Mag, вид спереди"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="sizes__slider-button sizes__slider-button--next"
+              aria-label="Следующий слайд"
+            >
+              <svg width="40" height="40">
+                <use
+                  class="sizes__slider-button-icon"
+                  href="./icons/main-sprite.svg#double-arrow"
+                ></use>
+              </svg>
+            </button>
           </div>
         </div>
       </section>
