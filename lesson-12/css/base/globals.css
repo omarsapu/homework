@@ -52,3 +52,23 @@ button:focus-visible {
   text-transform: uppercase;
   color: var(--main-color);
 }
+
+@media (width > 576px) {
+  .section {
+    margin-bottom: 140px;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (width <= 576px) {
+  .section {
+    margin-bottom: 80px;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+}
