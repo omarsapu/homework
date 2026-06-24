@@ -5,6 +5,7 @@
   /* colors */
   --main-color: #fff;
   --accent-color: #ffea00;
+  --accent-glow-color: #ffea004d;
   --bg-color: #2a2a29;
   --secondary-color: #c9c69b;
   --disable-color: #5d5d56;
@@ -19,6 +20,7 @@
 
   /* layers */
   --layer-negative: -1;
+  --layer-0: 0;
   --layer-1: 1;
   --layer-2: 2;
   --layer-3: 3;
