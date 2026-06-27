@@ -1,5 +1,5 @@
-export const sizesSlider = () => {
-  new Swiper(".sizes__slider", {
+export const productSlider = () => {
+  new Swiper(".product__slider", {
     slidesPerView: "auto",
     centeredSlides: true,
     loop: true,
@@ -7,8 +7,8 @@ export const sizesSlider = () => {
       forceToAxis: true,
     },
     navigation: {
-      prevEl: ".sizes__slider-button--prev",
-      nextEl: ".sizes__slider-button--next",
+      prevEl: ".product__slider-button--prev",
+      nextEl: ".product__slider-button--next",
     },
   });
 };
