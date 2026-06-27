@@ -4,12 +4,19 @@
 
   /* colors */
   --main-color: #fff;
+   --main-glow-color: #ffffff4d;
   --accent-color: #ffea00;
   --accent-glow-color: #ffea004d;
   --bg-color: #2a2a29;
   --secondary-color: #c9c69b;
-  --disable-color: #5d5d56;
+  --disabled-color: #5d5d56;
+  --disabled-glow-color: #5d5d564d;
   --shadow-color: #181817;
+
+  /* shadows */
+  --shadow-glow: 0 0 6px 2px var(--main-glow-color);
+  --shadow-accent-glow: 0 0 6px 2px var(--accent-glow-color);
+  --shadow-disabled-glow: 0 0 6px 2px var(--disabled-glow-color);
 
   /* container */
   --container-width: 1240px;
