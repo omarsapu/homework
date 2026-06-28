@@ -73,6 +73,7 @@
 }
 .top-models__product-icon {
   stroke: currentColor;
+  fill: none;
 }
 
 .top-models__product-img-wrapper {
