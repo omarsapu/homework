@@ -45,6 +45,7 @@ button:focus-visible {
   font-weight: 400;
 }
 
+.title-xs,
 .title-sm,
 .title-md {
   font-weight: 600;
@@ -60,6 +61,10 @@ button:focus-visible {
 .title-sm {
   /* min-width 375px, max-width 768px */
   font-size: clamp(24px, 1.023rem + 2.04vw, 32px);
+}
+
+.title-xs {
+  font-size: 18px;
 }
 
 @media (width > 576px) {
