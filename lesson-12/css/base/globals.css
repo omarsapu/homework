@@ -4,6 +4,7 @@
   color: var(--main-color);
   scroll-behavior: smooth;
   scroll-padding-top: 98px;
+  scrollbar-gutter: stable;
 }
 
 .page__body {
@@ -25,7 +26,8 @@ img {
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus {
   outline: 1px solid var(--accent-color);
   outline-offset: 2px;
 }

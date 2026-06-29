@@ -101,7 +101,7 @@
 
                 <use
                   class="burger__icon-cross"
-                  href="./icons/sprite.svg#menu-cross"
+                  href="./icons/sprite.svg#cross"
                 ></use>
               </svg>
             </button>
@@ -350,7 +350,13 @@
                 </div>
 
                 <div class="product__buy-wrapper">
-                  <button class="product__buy-button">Купить в 1 клик</button>
+                  <button
+                    class="product__buy-button"
+                    data-modal-button="buy"
+                    data-modal-speed="300"
+                  >
+                    Купить в 1 клик
+                  </button>
 
                   <button
                     class="product__cart-button"
@@ -849,5 +855,90 @@
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <a href="#" class="logo footer__logo">
+          <img
+            class="logo__img"
+            src="./icons/logo-icon.svg"
+            width="52"
+            height="20"
+            alt="Логотип Nike"
+          />
+        </a>
+
+        <nav class="menu footer__menu" aria-label="Главное меню">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#air-mag" class="menu__link" lang="en">Air Mag</a>
+            </li>
+            <li class="menu__item">
+              <a href="#product" class="menu__link">Размеры</a>
+            </li>
+            <li class="menu__item">
+              <a href="#characteristics" class="menu__link">Характеристики</a>
+            </li>
+            <li class="menu__item">
+              <a href="#top-models" class="menu__link">Другие ТОП модели</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a class="footer__phone" href="tel:+79292992929">+7 (929) 299-29-29</a>
+      </div>
+    </footer>
+
+    <div class="modal">
+      <div class="modal__window modal-buy" data-modal-window="buy">
+        <button
+          class="button modal__close"
+          aria-label="Закрыть"
+          title="Закрыть"
+          data-modal-close
+        >
+          <svg width="24" height="24">
+            <use href="./icons/sprite.svg#cross"></use>
+          </svg>
+        </button>
+
+        <div class="modal__content modal-buy__content">
+          <h3 class="modal-buy__title title-sm">Заявка на заказ</h3>
+          <form class="modal-buy__form">
+            <label class="modal-buy__label">
+              <input
+                type="text"
+                class="modal-buy__input"
+                placeholder="Ваше имя"
+                name="name"
+                required
+              />
+            </label>
+
+            <label class="modal-buy__label">
+              <input
+                type="tel"
+                class="modal-buy__input"
+                placeholder="Ваш номер телефона"
+                name="phone"
+                required
+              />
+            </label>
+
+            <label class="modal-buy__label">
+              <input
+                type="email"
+                class="modal-buy__input"
+                placeholder="E-mail"
+                name="email"
+                required
+              />
+            </label>
+
+            <button class="modal-buy__submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

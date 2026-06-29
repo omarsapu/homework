@@ -12,7 +12,9 @@
   --disabled-color: #5d5d56;
   --disabled-glow-color: #5d5d564d;
   --shadow-color: #181817;
-  --overlay-color: #2a2a2980;
+  --overlay: linear-gradient(rgba(30, 30, 30, 0.9), #000 1810%);
+
+  /* #2a2a2980 */
 
   /* shadows */
   --shadow-glow: 0 0 6px 2px var(--main-glow-color);

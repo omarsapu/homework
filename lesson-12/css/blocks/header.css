@@ -5,18 +5,30 @@
   left: 0;
   z-index: var(--layer-1);
   padding-block: 32px;
+  -webkit-transition: -webkit-box-shadow var(--transition-time);
+  transition: -webkit-box-shadow var(--transition-time);
   transition: box-shadow var(--transition-time);
+  transition:
+    box-shadow var(--transition-time),
+    -webkit-box-shadow var(--transition-time);
   background-color: var(--bg-color);
 }
 
 .header--fixed {
+  -webkit-box-shadow: 0 0 20px 0 var(--shadow-color);
   box-shadow: 0 0 20px 0 var(--shadow-color);
-  overflow-Y: hidden;
+  overflow-y: hidden;
 }
 
 .header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -27,6 +39,8 @@
   }
 
   .header__menu {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
   }
 }
@@ -39,12 +53,17 @@
     bottom: 0;
     min-width: 297px;
     z-index: var(--layer-2);
-    padding-top: 144px;
-    padding-right: 15px;
+    padding: 144px 15px 20px 0;
     background-color: var(--bg-color);
+    -webkit-box-shadow: -2px 0 20px 0 var(--shadow-color);
     box-shadow: -2px 0 20px 0 var(--shadow-color);
+    overflow-y: auto;
     opacity: 0;
     visibility: hidden;
+    -webkit-transition:
+      right var(--transition-time),
+      opacity var(--transition-time),
+      visibility var(--transition-time);
     transition:
       right var(--transition-time),
       opacity var(--transition-time),
@@ -58,14 +77,23 @@
   }
 
   .header__menu .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     text-align: end;
   }
 }
 
 .header__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -106,18 +134,26 @@
   display: block;
   width: 90%;
   min-height: 11px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-color: var(--accent-color);
   border-radius: 50%;
+  -webkit-filter: blur(30px);
   filter: blur(30px);
   opacity: 0;
   visibility: hidden;
+  -webkit-transition:
+    opacity var(--transition-time),
+    visibility var(--transition-time);
   transition:
     opacity var(--transition-time),
     visibility var(--transition-time);
 }
 
 .header__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -134,12 +170,19 @@
 }
 
 .header__actions-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 24px;
   height: 24px;
   color: var(--main-color);
+  -webkit-transition: color var(--transition-time);
   transition: color var(--transition-time);
 }
 
