@@ -1,0 +1,30 @@
+:root {
+  /* font-family */
+  --main-family: "Satoshi", sans-serif;
+  --inter-family: "Inter", sans-serif;
+  --title-family: "FONTSPRINGDEMO", sans-serif;
+  --integral-family: "Integral CF", sans-serif;
+
+  /* colors */
+  --main-color: #fff;
+  --accent-color: #000;
+  --bg-colors-1: #f0eeed;
+  --bg-colors-2: #f0f0f0;
+  --discount-color: #f33;
+  --disabled-color: #00000066;
+  --disabled-bg-color: rgba(255, 51, 51, 0.102);
+
+  /* container */
+  --container-width: 1240px;
+  --container-padding: 15px;
+
+  /* transitions */
+  --transition-time: 0.2s;
+
+  /* layers */
+  --layer-negative: -1;
+  --layer-0: 0;
+  --layer-1: 1;
+  --layer-2: 2;
+  --layer-3: 3;
+}

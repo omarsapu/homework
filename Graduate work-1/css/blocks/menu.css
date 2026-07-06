@@ -1,0 +1,45 @@
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (width > 996px) {
+  .menu__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+@media (width <= 996px) {
+  .menu__list {
+    display: none;
+  }
+}
+
+.menu__item {
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.menu__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.menu__link{
+  transition: opacity var(--transition-time);
+}
+
+@media (any-hover: hover) {
+  .menu__link:hover {
+    opacity: 0.7;
+  }
+}

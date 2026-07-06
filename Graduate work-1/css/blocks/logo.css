@@ -1,0 +1,19 @@
+.logo {
+  /* min-width 678px, max-width 1440px */
+  width: clamp(7.875rem, 5.217rem + 6.27vw, 10rem);
+  flex-shrink: 0;
+}
+
+@media (width <= 768px) {
+  .logo {
+    
+
+    flex-shrink: 0;
+  }
+
+  .header__menu {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+}
