@@ -1,0 +1,137 @@
+.products__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.products__card {
+  box-shadow: var(--shadow-box);
+  min-width: 325px;
+}
+
+@media (width <= 768px) {
+  .products__card {
+    min-width: 142px;
+  }
+}
+
+@media (width <= 578px) {
+  .products__card {
+    min-width: 170px;
+  }
+}
+
+.products__card-images {
+  width: 325px;
+  height: 325px;
+}
+
+@media (width <= 768px) {
+  .products__card-images {
+    width: 142px;
+    height: 142px;
+  }
+}
+
+@media (width <= 578px) {
+  .products__card-images {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+.products__card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 19px 30px 40px;
+}
+
+@media (width <= 768px) {
+  .products__card-content {
+    padding: 10px 13px 15px;
+  }
+}
+
+@media (any-hover: hover) {
+  .products__card:hover .products__card-content {
+    background-color: var(--title-color);
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+.products__card-title {
+  font-family: var(--accent-family);
+  font-weight: 900;
+  font-size: 30px;
+  color: var(--title-color);
+}
+
+@media (width <= 768px) {
+  .products__card-title {
+    font-size: 16px;
+  }
+}
+
+@media (width <= 578px) {
+  .products__card-title {
+    font-size: 13px;
+  }
+}
+
+@media (any-hover: hover) {
+  .products__card:hover .products__card-title {
+    color: var(--main-color);
+  }
+}
+
+.products__card-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 11px;
+}
+
+.products__card-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--title-color);
+}
+
+@media (width <= 768px) {
+  .products__card-link {
+    font-size: 12px;
+  }
+}
+
+@media (any-hover: hover) {
+  .products__card:hover .products__card-link {
+    color: var(--main-color);
+  }
+}
+
+.products__card-icon {
+  width: 34px;
+  height: 34px;
+  fill: currentColor;
+  color: var(--title-color);
+}
+
+@media (width <= 768px) {
+  .products__card-icon {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@media (any-hover: hover) {
+  .products__card:hover .products__card-icon {
+    color: var(--main-color);
+  }
+}

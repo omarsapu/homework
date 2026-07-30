@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+   <symbol id="burger"  viewBox="0 0 50 50">
+   <path d="M10.4167 14.582H39.5834" stroke="currentColor" stroke-width="2.58934" stroke-linecap="round" stroke-linejoin="round" />
+   <path d="M10.4167 25H39.5834" stroke="currentColor" stroke-width="2.58934" stroke-linecap="round" stroke-linejoin="round" />
+   <path d="M10.4167 35.416H39.5834" stroke="currentColor" stroke-width="2.58934" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+
+  <symbol id="cross"  viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6L18 18"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+
+  <symbol id="bag" viewBox="0 0 36 36" >
+   <path d="M4.5 13.5C4.5 11.8431 5.84314 10.5 7.5 10.5H28.5C30.1569 10.5 31.5 11.8431 31.5 13.5V30C31.5 31.6569 30.1569 33 28.5 33H7.5C5.84314 33 4.5 31.6569 4.5 30V13.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+   <path d="M12 15V9C12 5.68629 14.6863 3 18 3C21.3137 3 24 5.68629 24 9V14.5332" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+</svg>
