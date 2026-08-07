@@ -1,21 +1,16 @@
 .advantage__title {
-  font-weight: 900;
-  font-size: 42px;
   font-family: var(--accent-family);
-  color: var(--title-color);
   padding-bottom: 60px;
 }
 
 @media (width <= 992px) {
   .advantage__title {
-    font-size: 26px;
     padding-bottom: 40px;
   }
 }
 
 @media (width <= 992px) {
   .advantage__title {
-    font-size: 20px;
     padding-bottom: 30px;
   }
 }

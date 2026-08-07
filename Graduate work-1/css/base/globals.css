@@ -34,9 +34,8 @@ input:focus {
 
 .text-regular,
 .text-light {
-  font-size: 16px;
   line-height: 140%;
-  color: var(--accent-color);
+  color: var(--title-color);
 }
 
 .text-light {
@@ -54,17 +53,20 @@ input:focus {
 }
 
 .title-md {
-  /* min-width 992, max-width 1420 */
-  font-size: clamp(36px, 1.381rem + 1.4vw, 42px);
+  /* min-width 375, max-width 1420 */
+  font-size: clamp(36px, 0.757rem + 2.11vw, 42px);
 }
 
 .title-sm {
-  /* min-width 375px, max-width 768px */
-  font-size: clamp(0.813rem, 0.699rem + 0.57vw, 1.125rem);
+  /* min-width 375px, max-width 1420 */
+  font-size: clamp(20px, 0.85rem + 2vw, 42px);
+  font-weight: 900;
+  font-family: var(--accent-family);
 }
 
 .title-xs {
-  font-size: 18px;
+  /* min-width 375px, max-width 1200 */
+  font-size: clamp(0.75rem, 0.643rem + 0.54vw, 1.125rem);
 }
 
 .section {

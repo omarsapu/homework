@@ -9,8 +9,11 @@
   --spare-color: #c5358c;
   --bg-colors-1: #ddd;
   --bg-colors-2: #f8f8f8;
+  --bg-colors-3: #fdfdfd;
+  --border-color: #ccc;
   --title-color: #111;
-
+  --availability-color: #68ae5c;
+  --disabled-color: #ababab;
   --shadow-box:
     0 4px 41px 0 rgba(0, 0, 0, 0.05), 0 4px 41px 0 rgba(0, 0, 0, 0.05);
   --shadow-box-2: 0 4px 41px 0 rgba(0, 0, 0, 0.05);

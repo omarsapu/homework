@@ -3,8 +3,11 @@ import BurgerMenu from "./burger.js";
 import Modal from "./modal.js";
 import { productSlider } from "./product-slider.js";
 import { sizes } from "./sizes.js";
+// import { filter } from "./filter.js";
 
 try {
+  console.log("try начал работу");
+
   const headerFixed = new HeaderFixed({
     HEADER: "header",
     HEADER_FIXED: "header--fixed",
@@ -36,6 +39,12 @@ try {
 
   productSlider();
   sizes();
+
+  console.log("до фильтра");
+
+  filter();
+
+  console.log("после фильтра");
 } catch (error) {
   console.error(error);
 }

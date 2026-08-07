@@ -115,8 +115,6 @@ export default class BurgerMenu {
   }
 
   onBodyClick(event) {
-    console.log(this.burgerButton.className, this.burgerMenu.className);
-
     const target = event.target;
 
     const isLinkInMenu = target.classList.contains(this.config.MENU_LINK);

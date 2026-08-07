@@ -12,3 +12,8 @@
 @import "./blocks/titles.css";
 @import "./blocks/experts.css";
 @import "./blocks/advantage.css";
+@import "./blocks/categories.css";
+@import "./blocks/tags.css";
+@import "./blocks/filter.css";
+@import "./blocks/slider.css";
+@import "./blocks/product.css";
