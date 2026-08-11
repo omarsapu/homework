@@ -117,3 +117,47 @@ prevBtn.addEventListener("click", () => {
 });
 
 updateSlider();
+
+// ABOUT
+
+const photosLinks = document.querySelectorAll(".about__photos-link");
+
+const maxPhotos = 6;
+
+photosLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const images = link.previousElementSibling;
+    const currentPhotos = images.querySelectorAll(".about__lightbox");
+
+    if (currentPhotos.length >= maxPhotos) {
+      link.style.display = "none";
+      return;
+    }
+
+    const newPhoto = document.createElement("a");
+
+    newPhoto.className = "about__lightbox about__lightbox--new";
+    newPhoto.dataset.fslightbox = "gallery";
+    newPhoto.href = "./img/about-img-large.webp";
+
+    newPhoto.innerHTML = `
+      <img
+        class="about__img"
+        width="95"
+        height="95"
+        src="./img/about-img.webp"
+        alt="Фото"
+      >
+    `;
+
+    images.append(newPhoto);
+
+    refreshFsLightbox();
+
+    if (images.querySelectorAll(".about__lightbox").length >= maxPhotos) {
+      link.style.display = "none";
+    }
+  });
+});
