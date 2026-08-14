@@ -123,6 +123,7 @@ updateSlider();
 const photosLinks = document.querySelectorAll(".about__photos-link");
 
 const maxPhotos = 6;
+const photosPerClick = 3;
 
 photosLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
@@ -136,23 +137,30 @@ photosLinks.forEach((link) => {
       return;
     }
 
-    const newPhoto = document.createElement("a");
+    for (let i = 0; i < photosPerClick; i++) {
+      // Проверяем лимит
+      if (images.querySelectorAll(".about__lightbox").length >= maxPhotos) {
+        break;
+      }
 
-    newPhoto.className = "about__lightbox about__lightbox--new";
-    newPhoto.dataset.fslightbox = "gallery";
-    newPhoto.href = "./img/about-img-large.webp";
+      const newPhoto = document.createElement("a");
 
-    newPhoto.innerHTML = `
-      <img
-        class="about__img"
-        width="95"
-        height="95"
-        src="./img/about-img.webp"
-        alt="Фото"
-      >
-    `;
+      newPhoto.className = "about__lightbox about__lightbox--new";
+      newPhoto.dataset.fslightbox = "gallery";
+      newPhoto.href = "./img/about-img-large.webp";
 
-    images.append(newPhoto);
+      newPhoto.innerHTML = `
+        <img
+          class="about__img"
+          width="95"
+          height="95"
+          src="./img/about-img.webp"
+          alt="Фото"
+        >
+      `;
+
+      images.append(newPhoto);
+    }
 
     refreshFsLightbox();
 
