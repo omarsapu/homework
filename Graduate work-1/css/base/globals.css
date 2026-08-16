@@ -70,24 +70,28 @@ input:focus {
 }
 
 .section {
-  margin-bottom: 150px;
+  padding-block: 150px;
+}
+
+@media (width <= 768px) {
+  .section{
+    padding-block: 60px;
+  }
+}
+
+@media (width <= 578px) {
+  .section{
+    padding-block: 40px;
+  }
 }
 
 @media (width > 576px) {
-  .section {
-    margin-bottom: 60px;
-  }
-
   .section-title {
     margin-bottom: 40px;
   }
 }
 
 @media (width <= 576px) {
-  .section {
-    margin-bottom: 30px;
-  }
-
   .section-title {
     margin-bottom: 30px;
   }

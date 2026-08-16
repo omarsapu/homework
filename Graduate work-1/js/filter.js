@@ -1,171 +1,110 @@
-const filter = document.querySelector(".filter");
+export const filter = () => {
+  const filterElement = document.querySelector(".filter");
 
-if (filter) {
-  const button = filter.querySelector(".filter__button");
-  const items = filter.querySelectorAll(".filter__item");
+  if (!filterElement) return;
 
+  const button = filterElement.querySelector(".filter__button");
+  const defaultText = filterElement.querySelector(".filter__default");
+  const items = filterElement.querySelectorAll(".filter__item");
+
+  // Все слайды
+  const slides = document.querySelectorAll(".slider__page");
+
+  if (!button || !defaultText || !items.length || !slides.length) return;
+
+  // Открытие / закрытие фильтра
   button.addEventListener("click", () => {
-    filter.classList.toggle("filter--open");
+    filterElement.classList.toggle("filter--open");
   });
 
-  items.forEach((item) => {
-    item.addEventListener("click", () => {
-      const value = button.querySelector(".filter__default");
+  // Сортировка одного слайда
+  const sortSlide = (slide, sortType) => {
+    const cardsContainer = slide.querySelector(".product__cards");
 
-      value.textContent = item.textContent;
+    if (!cardsContainer) return;
 
-      filter.classList.remove("filter--open");
-    });
-  });
-}
+    const cards = [...cardsContainer.querySelectorAll(".product__card")];
 
-// Active-checked
-const value = document.querySelector(".filter__default");
-const items = document.querySelectorAll(".filter__item");
+    cards.sort((a, b) => {
+      const priceA = Number(a.dataset.price);
+      const priceB = Number(b.dataset.price);
 
-items.forEach((item) => {
-  item.addEventListener("click", () => {
-    value.textContent = item.textContent;
+      const ratingA = Number(a.dataset.rating);
+      const ratingB = Number(b.dataset.rating);
 
-    items.forEach((el) => {
-      el.classList.remove("active-checked");
-    });
+      const popularA = Number(a.dataset.popular);
+      const popularB = Number(b.dataset.popular);
 
-    item.classList.add("active-checked");
-  });
-});
+      const dateA = new Date(a.dataset.date);
+      const dateB = new Date(b.dataset.date);
 
-// SPEAKER
-const MIN_COUNT = 1;
-const MAX_COUNT = 10;
+      switch (sortType) {
+        case "cheap":
+          return priceA - priceB;
 
-const counters = document.querySelectorAll(".product__card-counter");
+        case "expensive":
+          return priceB - priceA;
 
-counters.forEach((counter) => {
-  const minusBtn = counter.querySelector(".counter-btn--minus");
-  const plusBtn = counter.querySelector(".counter-btn--plus");
-  const count = counter.querySelector(".product__card-count");
+        case "rating":
+          return ratingB - ratingA;
 
-  let value = Number(count.textContent);
+        case "new":
+          return dateB - dateA;
 
-  function updateCounter() {
-    count.textContent = value;
-
-    // Кнопка "-"
-    minusBtn.disabled = value <= MIN_COUNT;
-
-    // Кнопка "+"
-    plusBtn.disabled = value >= MAX_COUNT;
-  }
-
-  plusBtn.addEventListener("click", () => {
-    if (value < MAX_COUNT) {
-      value++;
-      updateCounter();
-    }
-  });
-
-  minusBtn.addEventListener("click", () => {
-    if (value > MIN_COUNT) {
-      value--;
-      updateCounter();
-    }
-  });
-
-  updateCounter();
-});
-
-// Slider
-const track = document.querySelector(".slider__list");
-const slides = document.querySelectorAll(".slider__page");
-
-const prevBtn = document.querySelector(".slider-button--prev");
-const nextBtn = document.querySelector(".slider-button--next");
-
-const current = document.querySelector(".slider__current");
-const total = document.querySelector(".slider__total");
-console.log(track);
-console.log(slides.length);
-console.log(prevBtn);
-console.log(nextBtn);
-
-let currentSlide = 0;
-
-total.textContent = slides.length;
-
-function updateSlider() {
-  track.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-  current.textContent = currentSlide + 1;
-
-  prevBtn.disabled = currentSlide === 0;
-  nextBtn.disabled = currentSlide === slides.length - 1;
-}
-
-nextBtn.addEventListener("click", () => {
-  if (currentSlide < slides.length - 1) {
-    currentSlide++;
-    updateSlider();
-  }
-});
-
-prevBtn.addEventListener("click", () => {
-  if (currentSlide > 0) {
-    currentSlide--;
-    updateSlider();
-  }
-});
-
-updateSlider();
-
-// ABOUT
-
-const photosLinks = document.querySelectorAll(".about__photos-link");
-
-const maxPhotos = 6;
-const photosPerClick = 3;
-
-photosLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    const images = link.previousElementSibling;
-    const currentPhotos = images.querySelectorAll(".about__lightbox");
-
-    if (currentPhotos.length >= maxPhotos) {
-      link.style.display = "none";
-      return;
-    }
-
-    for (let i = 0; i < photosPerClick; i++) {
-      // Проверяем лимит
-      if (images.querySelectorAll(".about__lightbox").length >= maxPhotos) {
-        break;
+        case "popular":
+        default:
+          return popularB - popularA;
       }
+    });
 
-      const newPhoto = document.createElement("a");
+    // Переставляем карточки внутри текущего слайда
+    cards.forEach((card) => {
+      cardsContainer.appendChild(card);
+    });
+  };
 
-      newPhoto.className = "about__lightbox about__lightbox--new";
-      newPhoto.dataset.fslightbox = "gallery";
-      newPhoto.href = "./img/about-img-large.webp";
+  // Выбранная сортировка
+  let currentSort = "popular";
 
-      newPhoto.innerHTML = `
-        <img
-          class="about__img"
-          width="95"
-          height="95"
-          src="./img/about-img.webp"
-          alt="Фото"
-        >
-      `;
+  // Применяем сортировку ко всем слайдам
+  const sortAllSlides = (sortType) => {
+    slides.forEach((slide) => {
+      sortSlide(slide, sortType);
+    });
+  };
 
-      images.append(newPhoto);
-    }
+  // Выбор фильтра
+  items.forEach((item) => {
+    const filterButton = item.querySelector(".filter__btn");
 
-    refreshFsLightbox();
+    if (!filterButton) return;
 
-    if (images.querySelectorAll(".about__lightbox").length >= maxPhotos) {
-      link.style.display = "none";
-    }
+    filterButton.addEventListener("click", () => {
+      const sortType = filterButton.dataset.sort;
+
+      if (!sortType) return;
+
+      currentSort = sortType;
+
+      // Меняем текст кнопки
+      defaultText.textContent = filterButton.textContent.trim();
+
+      // Убираем active у всех
+      items.forEach((element) => {
+        element.classList.remove("active-checked");
+      });
+
+      // Добавляем выбранному
+      item.classList.add("active-checked");
+
+      // Сортируем каждый слайд отдельно
+      sortAllSlides(currentSort);
+
+      // Закрываем фильтр
+      filterElement.classList.remove("filter--open");
+    });
   });
-});
+
+  // Начальная сортировка
+  sortAllSlides(currentSort);
+};

@@ -70,6 +70,10 @@
   }
 }
 
+.tags__item--hidden {
+  display: none;
+}
+
 .tags__link {
   font-weight: 400;
   font-size: 16px;
@@ -91,7 +95,7 @@
   font-weight: 400;
   font-size: 18px;
   color: var(--spare-color);
-  border-bottom: 2px solid var(--spare-color);
+  text-decoration: underline;
   transition: all var(--transition-time);
 }
 

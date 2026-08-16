@@ -1,17 +1,19 @@
 export const sizes = () => {
-  const sizesList = document.querySelector('[data-sizes="list"]');
-  const sizesButtons = document.querySelectorAll('[data-sizes="button"]');
+  const list = document.querySelector('[data-sizes="list"]');
 
-  const handleSizeClick = (event) => {
-    const target = event.target;
+  if (!list) return;
 
-    if (!target?.classList.contains("product__sizes-button")) return;
+  list.addEventListener("click", (event) => {
+    const button = event.target.closest('[data-sizes="button"]');
 
-    sizesButtons.forEach((button) =>
-      button.classList.remove("product__sizes-button--active")
-    );
-    target.classList.add("product__sizes-button--active");
-  };
+    if (!button) return;
 
-  sizesList.addEventListener("click", handleSizeClick);
+    const buttons = list.querySelectorAll('[data-sizes="button"]');
+
+    buttons.forEach((item) => {
+      item.classList.remove("product__sizes-button--active");
+    });
+
+    button.classList.add("product__sizes-button--active");
+  });
 };

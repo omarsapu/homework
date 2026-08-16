@@ -152,6 +152,10 @@
   }
 }
 
+.about__item--hidden {
+  display: none;
+}
+
 .about__author {
   display: inline-flex;
   flex-direction: column;
