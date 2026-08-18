@@ -59,7 +59,7 @@ input:focus {
 
 .title-sm {
   /* min-width 375px, max-width 1420 */
-  font-size: clamp(20px, 0.85rem + 2vw, 42px);
+  font-size: clamp(20px, 1.5vw + 12px, 42px);
   font-weight: 900;
   font-family: var(--accent-family);
 }
@@ -74,13 +74,13 @@ input:focus {
 }
 
 @media (width <= 768px) {
-  .section{
+  .section {
     padding-block: 60px;
   }
 }
 
 @media (width <= 578px) {
-  .section{
+  .section {
     padding-block: 40px;
   }
 }
@@ -106,5 +106,21 @@ input:focus {
   max-height: 90vh;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
-
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--bg-colors-2) inset;
+  -webkit-text-fill-color: #000;
+}

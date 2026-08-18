@@ -2785,6 +2785,77 @@
           </button>
         </div>
       </section>
+
+      <section class="contact section">
+        <div class="container contact__container">
+          <form class="contact__form" action="#" method="post">
+            <h4 class="contact__title title-sm">Свяжитесь с нами</h4>
+
+            <label class="contact__label">
+              <span class="visually-hidden">Ваше имя</span>
+              <input
+                class="contact__input"
+                type="text"
+                name="name"
+                placeholder="Ваше имя"
+                autocomplete="name"
+                required
+              />
+            </label>
+
+            <label class="contact__label">
+              <span class="visually-hidden">Ваш номер телефона</span>
+              <input
+                class="contact__input"
+                type="tel"
+                name="phone"
+                placeholder="Ваш номер телефона"
+                autocomplete="tel"
+                required
+              />
+            </label>
+
+            <div class="contact__button">
+              <button class="contact__btn" type="submit">
+                Оставить заявку
+              </button>
+            </div>
+          </form>
+
+          <form class="contact__form" method="post" action="#">
+            <h4 class="contact__title title-sm">Подпишитесь на новости</h4>
+
+            <label class="contact__label">
+              <span class="visually-hidden">Ваш e-mail</span>
+              <input
+                class="contact__input"
+                type="email"
+                name="email"
+                placeholder="Ваш e-mail"
+                required
+              />
+            </label>
+
+            <div class="contact__button">
+              <button class="contact__btn" type="submit">Подписаться</button>
+            </div>
+            <label class="contact__agreement">
+              <div class="contact__checkbox-wrapper">
+                <input
+                  class="contact__checkbox"
+                  type="checkbox"
+                  name="agreement"
+                  required
+                />
+              </div>
+              <span class="contact__checkbox-text"
+                >Я ознакомлен(а) с политикой конфиденциальности и согласен(а) с
+                обработкой персональных данных
+              </span>
+            </label>
+          </form>
+        </div>
+      </section>
     </main>
   </body>
 </html>
