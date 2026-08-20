@@ -1,0 +1,167 @@
+.news__title {
+  padding-bottom: 70px;
+}
+
+@media (width <= 768px) {
+  .news__title {
+    padding-bottom: 30px;
+  }
+}
+
+.news__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 80px;
+}
+
+@media (width <= 768px) {
+  .news__list {
+    padding-bottom: 45px;
+  }
+}
+
+@media (width <= 578px) {
+  .news__list {
+    padding-bottom: 30px;
+  }
+}
+
+.news__item--hidden {
+  display: none;
+}
+
+.news__card {
+  display: flex;
+  flex-direction: column;
+  color: var(--title-color);
+  max-width: 440px;
+}
+
+@media (width <= 768px) {
+  .news__card {
+    max-width: 196px;
+  }
+}
+
+@media (width <= 578px) {
+  .news__card {
+    width: 170px;
+  }
+
+  .news__item:nth-child(3) {
+    display: none;
+  }
+}
+
+.news__card-images {
+  padding-bottom: 30px;
+}
+
+@media (width <= 768px) {
+  .news__card-images {
+    padding-bottom: 12px;
+  }
+}
+
+@media (width <= 578px) {
+  .news__card-images {
+    padding-bottom: 10px;
+  }
+}
+
+.news__card-img {
+  width: 440px;
+  height: 294px;
+}
+
+@media (width <= 768px) {
+  .news__card-img {
+    width: 196px;
+    height: 130px;
+  }
+}
+
+@media (width <= 578px) {
+  .news__card-img {
+    width: 170px;
+    height: 113px;
+  }
+}
+
+.news__card-date {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--date-color);
+  padding-bottom: 20px;
+}
+
+@media (width <= 768px) {
+  .news__card-date {
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (width <= 578px) {
+  .news__card-date {
+    padding-bottom: 6px;
+  }
+}
+
+.news__card-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  padding-bottom: 15px;
+}
+
+@media (width <= 768px) {
+  .news__card-title {
+    font-size: 14px;
+    padding-bottom: 6px;
+  }
+}
+
+@media (width <= 578px) {
+  .news__card-title {
+    font-size: 12px;
+  }
+}
+
+.news__card-desc {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 120%;
+  padding-bottom: 20px;
+}
+
+@media (width <= 768px) {
+  .news__card-desc {
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (width <= 578px) {
+  .news__card-desc {
+    padding-bottom: 6px;
+  }
+}
+
+.news__card-link {
+  font-weight: 400;
+  font-size: 18px;
+
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--spare-color);
+}
+
+@media (width <= 768px) {
+  .news__card-link {
+    font-size: 12px;
+  }
+}

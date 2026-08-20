@@ -1,0 +1,256 @@
+.product__cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 40px;
+}
+
+.product__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 440px;
+  background-color: var(--main-color);
+  box-shadow: var(--shadow-box-2);
+}
+
+@media (width <= 768px) {
+  .product__card {
+    width: 196px;
+  }
+}
+
+@media (width <= 578px) {
+  .product__card {
+    width: 170px;
+  }
+}
+
+.product__card-image {
+  /* width: clamp(10.625rem, 5.716rem + 24.55vw, 27.5rem); */
+}
+
+.product__card-img {
+  width: clamp(170px, 4.489rem + 30.68vw, 440px);
+}
+
+.product__card-content {
+  color: var(--title-color);
+  padding: 40px;
+}
+
+@media (width <= 992px) {
+  .product__card-content {
+    padding: 10px 12px;
+  }
+}
+
+.product__card-title {
+  font-size: 24px;
+}
+
+@media (width <= 992px) {
+  .product__card-title {
+    font-size: 18px;
+  }
+}
+
+@media (width <= 768px) {
+  .product__card-title {
+    font-size: 12px;
+  }
+}
+
+@media (width <= 578px) {
+  .product__card-title {
+    font-size: 10px;
+  }
+}
+
+.product__card-info {
+  padding-top: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (width <= 992px) {
+  .product__card-info {
+    padding-top: 10px;
+  }
+}
+
+.product__card-availability {
+  color: var(--availability-color);
+  font-size: 18px;
+  left: 30px;
+  position: relative;
+}
+
+@media (width <= 992px) {
+  .product__card-availability {
+    font-size: 12px;
+  }
+}
+
+@media (width <= 578px) {
+  .product__card-availability {
+    font-size: 10px;
+    left: 20px;
+  }
+}
+
+.product__card-availability::before {
+  content: url(../../icons/availability.svg);
+  position: absolute;
+  left: -30px;
+  width: 13px;
+  height: 13px;
+}
+
+@media (width <= 578px) {
+  .product__card-availability::before {
+    width: 10px;
+    height: 10px;
+    left: -20px;
+  }
+}
+
+.product__card-discount {
+  border-radius: 3px;
+  padding: 10px 20px;
+  background-color: var(--spare-color);
+
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--bg-colors-2);
+}
+
+@media (width <= 768px) {
+  .product__card-discount {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+}
+
+.product__card-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.product__card-price-current {
+  font-family: var(--accent-family);
+  font-weight: 900;
+  font-size: 42px;
+}
+
+@media (width <= 768px) {
+  .product__card-price-current {
+    font-size: 20px;
+  }
+}
+
+@media (width <= 578px) {
+  .product__card-price-current {
+    font-size: 17px;
+  }
+}
+
+.product__card-price-old {
+  font-family: var(--accent-family);
+  font-weight: 900;
+  font-size: 24px;
+  text-decoration: line-through;
+  color: var(--disabled-color);
+}
+
+@media (width <= 768px) {
+  .product__card-price-old {
+    font-size: 12px;
+  }
+}
+
+.product__card-actions {
+  display: flex;
+  width: 100%;
+}
+
+.product__card-counter {
+  display: flex;
+  color: var(--title-color);
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--title-color);
+  border-radius: 3px;
+  padding: 10px;
+  width: 220px;
+  height: 64px;
+}
+
+@media (width <= 768px) {
+  .product__card-counter {
+    display: none;
+  }
+}
+
+.product__card-counter-btn {
+  width: 18px;
+  height: 18px;
+}
+
+.product__card-icon {
+  fill: currentColor;
+  stroke: currentColor;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.product__card-count {
+  font-size: 24px;
+  line-height: 0%;
+  color: var(--title-color);
+}
+
+.product__card-button {
+  border-radius: 3px;
+  padding: 10px 20px;
+  width: 220px;
+  height: 64px;
+  background-color: var(--title-color);
+  color: var(--bg-colors-2);
+
+  font-weight: 400;
+  font-size: 24px;
+  transition: background-color var(--transition-time);
+}
+
+@media (width <= 768px) {
+  .product__card-button {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media (width <= 578px) {
+  .product__card-button {
+    font-size: 15px;
+  }
+}
+
+@media (any-hover: hover) {
+  .product__card-button:hover {
+    background-color: var(--spare-color);
+  }
+}
+.product__card-icon:disabled {
+  stroke: var(--disabled-color);
+  cursor: not-allowed;
+}
