@@ -1,0 +1,115 @@
+.filter {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 50px;
+}
+
+@media (any-hover: hover) {
+  .filter:hover {
+    color: var(--spare-color);
+  }
+}
+
+.filter__wrapper {
+  min-width: 273px;
+}
+
+.filter__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 7px 25px;
+  font: inherit;
+  border: 1px solid var(--spare-color);
+  border-radius: 8px;
+  background-color: var(--bg-colors-2);
+  font-size: 18px;
+  cursor: pointer;
+  transition: all var(--transition-time);
+}
+
+@media (width <= 768px) {
+  .filter__button{
+     padding: 6px 15px;
+  }
+}
+
+@media (any-hover: hover) {
+  .filter__button {
+    color: var(--title-color);
+    transition: color var(--transition-time);
+  }
+
+  .categories__filter:hover .filter__button {
+    color: var(--spare-color);
+  }
+}
+
+.filter__svg {
+  fill: currentColor;
+  transition: transform var(--transition-time);
+}
+
+.filter__list {
+  position: absolute;
+
+  width: 273px;
+  margin: 0;
+
+  list-style: none;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: var(--bg-colors-3);
+  box-shadow: var(--shadow-box);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.3s,
+    visibility 0.3s,
+    transform 0.3s;
+  z-index: var(--layer-1);
+}
+
+.filter--open .filter__list {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.filter__item {
+  padding: 7px 25px 8px 25px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-top: 1px solid var(--border-color);
+
+  font-size: 18px;
+}
+
+@media (any-hover: hover) {
+  .filter__item:hover {
+    background-color: var(--bg-colors-2);
+  }
+}
+
+.filter--open .filter__svg {
+  transform: rotate(180deg);
+}
+
+.active-checked .filter__btn {
+  font-weight: 400;
+}
+
+.filter__item.active-checked::after {
+  content: url(../../icons/check.svg);
+  position: absolute;
+  right: 0;
+  margin-right: 22px;
+  width: 17px;
+  height: 11px;
+}
