@@ -1,0 +1,146 @@
+.faq {
+  background-color: var(--bg-colors-2);
+  color: var(--title-color);
+}
+
+.faq__title {
+  font-weight: 900;
+}
+
+@media (width <= 578px) {
+  .faq__delete {
+    display: none;
+  }
+}
+
+.faq__articles {
+  padding-top: 60px;
+}
+
+@media (width <= 768px) {
+  .faq__articles {
+    padding-top: 40px;
+  }
+}
+
+.faq__item {
+  border-top: 1px solid var(--disabled-color);
+}
+
+.faq__item:last-child {
+  border-bottom: 1px solid var(--disabled-color);
+}
+
+.faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 34px 0;
+  min-height: 64px;
+  gap: 20px;
+
+  cursor: pointer;
+  list-style: none;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+@media (width <= 768px) {
+  .faq__question {
+    padding: 18px 0;
+    font-size: 16px;
+  }
+}
+
+@media (width <= 578px) {
+  .faq__question {
+    padding: 16px 0;
+    font-size: 13px;
+  }
+}
+
+.faq__question::after {
+  content: "";
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+
+  background: url(../../icons/faq-sprite.svg);
+  background-repeat: no-repeat;
+}
+
+.faq__item[open] .faq__question::after {
+  content: "";
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+
+  background: url(../../icons/faq-close.svg);
+  background-repeat: no-repeat;
+}
+
+@media (width <= 768px) {
+  .faq__item[open] .faq__question::after {
+    width: 28px;
+    height: 28px;
+  }
+
+  .faq__question::after {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (width <= 578px) {
+  .faq__item[open] .faq__question::after {
+    width: 22px;
+    height: 22px;
+  }
+
+  .faq__question::after {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq__item[open] .faq__icon::after {
+  display: none;
+}
+
+.faq__answer {
+  padding: 0 40px 25px 0;
+  max-width: 908px;
+}
+
+.faq__answer {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+@media (width <= 768px) {
+  .faq__answer {
+    font-size: 14px;
+  }
+}
+
+@media (width <= 578px) {
+  .faq__answer {
+    font-size: 11px;
+  }
+}
+
+.faq__item[open] .faq__icon::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.faq__item[open] .faq__icon::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
