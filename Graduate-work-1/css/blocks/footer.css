@@ -122,6 +122,12 @@
   }
 }
 
+@media (any-hover: hover) {
+  .footer__phone:hover{
+    color: var(--spare-color);
+  }
+}
+
 .footer__socials {
   display: flex;
   gap: 20px;
@@ -145,8 +151,8 @@
 .footer__svg {
   background-color: var(--main-color);
   color: var(--title-color);
-
   border-radius: 50%;
+  transition: background-color var(--transition-time);
 }
 
 @media (width <= 992px) {
@@ -167,6 +173,12 @@
   .footer__svg {
     width: 18px;
     height: 18px;
+  }
+}
+
+@media (any-hover: hover) {
+  .footer__svg:hover {
+    background-color: var(--spare-color);
   }
 }
 
