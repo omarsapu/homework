@@ -7,18 +7,15 @@ export const filter = () => {
   const defaultText = filterElement.querySelector(".filter__default");
   const items = filterElement.querySelectorAll(".filter__item");
 
-  // Все слайды
-  const slides = document.querySelectorAll(".slider__page");
-
-  if (!button || !defaultText || !items.length || !slides.length) return;
+  if (!button || !defaultText || !items.length) return;
 
   // Открытие / закрытие фильтра
   button.addEventListener("click", () => {
     filterElement.classList.toggle("filter--open");
   });
 
-  // Сортировка одного слайда
-  const sortSlide = (slide, sortType) => {
+  // Сортировка карточек
+  const sortCards = (slide, sortType) => {
     const cardsContainer = slide.querySelector(".product__cards");
 
     if (!cardsContainer) return;
@@ -57,19 +54,9 @@ export const filter = () => {
       }
     });
 
-    // Переставляем карточки внутри текущего слайда
+    // Переставляем карточки только текущего слайда
     cards.forEach((card) => {
-      cardsContainer.appendChild(card);
-    });
-  };
-
-  // Выбранная сортировка
-  let currentSort = "popular";
-
-  // Применяем сортировку ко всем слайдам
-  const sortAllSlides = (sortType) => {
-    slides.forEach((slide) => {
-      sortSlide(slide, sortType);
+      cardsContainer.append(card);
     });
   };
 
@@ -84,27 +71,27 @@ export const filter = () => {
 
       if (!sortType) return;
 
-      currentSort = sortType;
-
-      // Меняем текст кнопки
+      // Меняем название выбранного фильтра
       defaultText.textContent = filterButton.textContent.trim();
 
-      // Убираем active у всех
+      // Убираем active
       items.forEach((element) => {
         element.classList.remove("active-checked");
       });
 
-      // Добавляем выбранному
+      // Добавляем active выбранному
       item.classList.add("active-checked");
 
-      // Сортируем каждый слайд отдельно
-      sortAllSlides(currentSort);
+      // Находим текущий слайд
+      const currentSlide = document.querySelector(".slider__page--active");
+
+      // Сортируем только его
+      if (currentSlide) {
+        sortCards(currentSlide, sortType);
+      }
 
       // Закрываем фильтр
       filterElement.classList.remove("filter--open");
     });
   });
-
-  // Начальная сортировка
-  sortAllSlides(currentSort);
 };

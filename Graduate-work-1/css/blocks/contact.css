@@ -4,7 +4,7 @@
 
 .contact__container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 136px;
 }
 
@@ -16,7 +16,7 @@
 
 @media (width <= 578px) {
   .contact__container {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 46px;
   }
 }
@@ -108,11 +108,10 @@
     background-color: var(--disabled-color);
   }
 
-  .contact__btn:active{
+  .contact__btn:active {
     background-color: var(--spare-color);
   }
 }
-
 
 .contact__agreement {
   display: flex;
@@ -127,17 +126,20 @@
 
 .contact__checkbox-wrapper {
   position: relative;
+  width: 30px;
+  height: 30px;
   flex-shrink: 0;
 }
 
 .contact__checkbox {
   appearance: none;
-  width: 30px;
-  height: 30px;
   margin: 0;
   border: 1px solid #999;
   border-radius: 2px;
   cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
 @media (width <= 768px) {
@@ -148,28 +150,32 @@
 }
 
 .contact__checkbox-wrapper::after {
-  content: url("../../icons/cheked.svg");
+  content: "";
   position: absolute;
   width: 16px;
   height: 16px;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  left: 50%;
+  margin: 0;
+  background: url("../../icons/cheked.svg") center / contain no-repeat;
   opacity: 0;
   pointer-events: none;
+  transform: translate(-50%, -50%);
 }
 
 @media (width <= 768px) {
+  .contact__checkbox-wrapper {
+    width: 19px;
+    height: 19px;
+  }
+
   .contact__checkbox-wrapper::after {
     width: 11px;
     height: 11px;
-    top: 0;
-    transform: translate(-45%, -10%);
   }
 }
 
 .contact__checkbox-wrapper:has(.contact__checkbox:checked)::after {
-  transition: all var(--transition-time);
   opacity: 1;
 }
 

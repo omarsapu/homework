@@ -36,6 +36,10 @@ input:focus {
   outline-offset: 2px;
 }
 
+.logo{
+  width: clamp(5.875rem, 3.261rem + 10.72vw, 11.438rem);
+}
+
 .text-regular,
 .text-light {
   line-height: 140%;

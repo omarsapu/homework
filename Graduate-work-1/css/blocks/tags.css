@@ -22,8 +22,10 @@
 }
 
 @media (width <= 768px) {
-  .tags__menu{
+  .tags__menu {
     gap: 10px;
+    min-width: 0;
+    width: 100%;
   }
 }
 
@@ -42,9 +44,10 @@
 }
 
 @media (any-hover: hover) {
-  .tags__item:hover {
-    border-color: var(--spare-color);
+  .tags__item:hover,
+  .tags__item:hover .tags__link {
     color: var(--spare-color);
+    border-color: var(--spare-color);
   }
 }
 

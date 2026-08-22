@@ -6,8 +6,8 @@
 
 .about__header {
   display: grid;
-  grid-template-columns: 161px minmax(0, 1fr) auto;
-  gap: 70px;
+  grid-template-columns: 199px minmax(0, 1fr) auto;
+  gap: 30px;
   border-bottom: 1px solid var(--disabled-color);
   padding-bottom: 50px;
 }

@@ -21,7 +21,7 @@ export const about = () => {
     button.firstChild.textContent = isOpen ? "Скрыть" : "Показать еще";
 
     if (icon) {
-      icon.style.display = isOpen ? "none" : "";
+      icon.style.display = isOpen ? "none" : "block";
     }
   });
 };

@@ -1,4 +1,4 @@
-@media (width > 996px){
+/* @media (width > 996px){
   .burger{
     display: none;
   }
@@ -15,22 +15,62 @@
     height: 50px;
   }
 
-  /* по умолчанию показываем бургер */
   .burger__icon-menu {
     display: block;
   }
 
-  /* крестик скрыт */
   .burger__icon-cross {
     display: none;
   }
 
-  /* когда меню открыто */
   .burger--open .burger__icon-menu {
     display: none;
   }
 
   .burger--open .burger__icon-cross {
     display: block;
+  }
+} */
+
+.burger {
+  display: none;
+}
+
+@media (width <= 992px) {
+  .burger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    z-index: var(--layer-3);
+  }
+
+  .burger__icon-menu,
+  .burger__icon-cross {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+  }
+
+  .burger__icon-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .burger__icon-cross {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .burger--open .burger__icon-menu {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .burger--open .burger__icon-cross {
+    opacity: 1;
+    visibility: visible;
   }
 }

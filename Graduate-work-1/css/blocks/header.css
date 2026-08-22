@@ -29,10 +29,6 @@
   }
 }
 
-.header__logo {
-  width: clamp(5.875rem, 3.261rem + 10.72vw, 11.438rem);
-}
-
 .header__button {
   color: var(--main-color);
 }
@@ -68,7 +64,7 @@
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
-    z-index: var(--layer-3);
+    transition: all var(--transition-time);
   }
 
   .header__icons {
@@ -119,5 +115,27 @@
 @media (any-hover: hover) {
   .header__link:hover {
     color: var(--spare-color);
+  }
+}
+
+@media (width <= 578px) {
+  .header__purchase {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .header__add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    width: 12px;
+    height: 13px;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 9px;
+    color: #000;
   }
 }

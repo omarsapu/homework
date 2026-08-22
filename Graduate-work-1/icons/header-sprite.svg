@@ -5,7 +5,7 @@
    <path d="M10.4167 35.416H39.5834" stroke="currentColor" stroke-width="2.58934" stroke-linecap="round" stroke-linejoin="round" />
   </symbol>
 
-  <symbol id="cross"  viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6L18 18"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <symbol id="cross"  viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6L18 18"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="#fff"/>
   </symbol>
 
   <symbol id="bag" viewBox="0 0 36 36" >
