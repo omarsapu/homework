@@ -21,4 +21,4 @@ let d = Boolean(0);
 let e = Boolean(" ");
 let result = a + b + c + d + e;
 
-// 123456789falsetrye 
+// 123456789falsetrue 
