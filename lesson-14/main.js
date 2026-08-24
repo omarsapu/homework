@@ -34,14 +34,14 @@ if ((role === "admin" || role === "user") &&  password === "123456"){
 }
 
 // Задача 4*
-const weight = +prompt("Введите вес посылки в (кг):");
-const rate = prompt("Введите тип доставки:");
+// const weight = +prompt("Введите вес посылки в (кг):");
+// const rate = prompt("Введите тип доставки:");
 
-switch ((type = rate)) {
-  case "Стандарт":
-  case "Экспресс":
-  case "Премиум":
-}
+// switch ((type = rate)) {
+//   case "Стандарт":
+//   case "Экспресс":
+//   case "Премиум":
+// }
 
 // if (weight <= 0){
 //   alert("Некорректный вес посылки!")
