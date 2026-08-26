@@ -12,7 +12,7 @@ let factorial = 1;
 for (i = 1; i <= number; i++) {
   factorial = factorial * i;
 }
-console.log(factorial);
+alert(factorial);
 
 // Задача 3
 for (i = 1; i <= 8; i++) {
