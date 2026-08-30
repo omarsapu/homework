@@ -45,7 +45,13 @@ const first = (arr, n) => {
     return [];
   } else if (n === undefined) {
     return [arr[0]];
+  }else
+    
+  if (n > arr.length) {
+    console.error(`${n} больше количества элементов массива`);
+    return;
   }
+
   const result = [];
 
   arr.forEach((item, index) => {
@@ -56,4 +62,4 @@ const first = (arr, n) => {
   return result;
 };
 
-console.log(first([0, 20, 30, 40]));
+console.log(first([10, 25, 33, 49], 2));
