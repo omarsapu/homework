@@ -3,7 +3,7 @@
 const todoKeys = {
   id: "id",
   text: "text",
-  is_completed: "is_completed",
+  isCompleted: "isCompleted",
 };
 
 const todos = [];
@@ -17,7 +17,7 @@ const createTodo = (todos, text) => {
   const newTodo = {
     [todoKeys.id]: getNewTodoId(todos),
     [todoKeys.text]: text,
-    [todoKeys.is_completed]: false,
+      [todoKeys.isCompleted]: false,
   };
   todos.push(newTodo);
   return newTodo;
@@ -29,13 +29,13 @@ const completeTodoById = (todos, todoId) => {
     console.error(errTodoNotFound(todoId));
     return null;
   }
-  todo[todoKeys.is_completed] = !todo[todoKeys.is_completed];
+  todo[todoKeys.isCompleted] = !todo[todoKeys.isCompleted];
   return todo;
 };
 
 const deleteTodoById = (todos, todoId) => {
   const todoIndex = todos.findIndex((todo) => todo[todoKeys.id] === todoId);
-  if (todoIndex == -1) {
+  if (todoIndex === -1) {
     console.error(errTodoNotFound(todoId));
     return todos;
   }
