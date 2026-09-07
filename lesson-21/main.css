@@ -35,10 +35,6 @@ body {
   min-width: 360px;
 }
 
-.completed {
-  text-decoration: line-through;
-}
-
 .app {
   display: flex;
   flex-direction: column;
