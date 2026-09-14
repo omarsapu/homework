@@ -264,6 +264,7 @@
     background-color: var(--spare-color);
   }
 }
+
 .product__card-icon:disabled {
   stroke: var(--disabled-color);
   cursor: not-allowed;

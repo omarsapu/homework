@@ -118,6 +118,45 @@
   }
 }
 
+.header__purchase {
+  position: relative;
+}
+
+.header__add {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 28px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.header__add-check{
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (width <= 992px) {
+  .header__add{
+    right: 0;
+    top: 18px;
+    width: 18px;
+    height: 18px;
+
+    font-size: 12px;
+  }
+}
+
 @media (width <= 578px) {
   .header__purchase {
     display: flex;

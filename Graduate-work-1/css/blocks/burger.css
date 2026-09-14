@@ -1,36 +1,3 @@
-/* @media (width > 996px){
-  .burger{
-    display: none;
-  }
-}
-
-@media (width <= 996px) {
-  .burger {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: var(--layer-3);
-    width: 50px;
-    height: 50px;
-  }
-
-  .burger__icon-menu {
-    display: block;
-  }
-
-  .burger__icon-cross {
-    display: none;
-  }
-
-  .burger--open .burger__icon-menu {
-    display: none;
-  }
-
-  .burger--open .burger__icon-cross {
-    display: block;
-  }
-} */
 
 .burger {
   display: none;

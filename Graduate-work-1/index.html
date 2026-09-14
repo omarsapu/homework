@@ -14,7 +14,7 @@
       defer
     ></script>
     <script src="./js/fslightbox.js" type="module"></script>
-    <script src="./js/index.js" type="module"></script>
+    <script src="./js/main.js" type="module"></script>
 
     <title>Dyson</title>
   </head>
@@ -61,10 +61,12 @@
         >
           <ul class="header__list menu__list">
             <li class="header__item menu__item">
-              <a href="#" class="header__link menu__link">О нас</a>
+              <a href="#footer" class="header__link menu__link">О нас</a>
             </li>
             <li class="header__item menu__item">
-              <a href="#" class="header__link menu__link">Доставка и оплата</a>
+              <a href="#product" class="header__link menu__link"
+                >Доставка и оплата</a
+              >
             </li>
             <li class="header__item menu__item">
               <a href="#" class="header__link menu__link"
@@ -83,7 +85,10 @@
         </nav>
 
         <div class="header__purchase">
-          <button class="header__button header__bag">
+          <button
+            class="header__button header__bag"
+            aria-label="Открыть корзину"
+          >
             <svg class="header__icons">
               <use
                 class="header__icon"
@@ -93,6 +98,13 @@
           </button>
 
           <span class="header__add">1</span>
+
+          <ul class="cart">
+            <div class="cart__sum">
+              <button class="cart__sum-btn">Оплатить</button>
+              <span class="cart__sum-price">0р</span>
+            </div>
+          </ul>
         </div>
       </div>
     </header>
@@ -651,7 +663,7 @@
               <div class="slider__list">
                 <!-- Слайд 1 -->
                 <div class="slider__page">
-                  <div class="product__cards">
+                  <div class="product__cards" id="product">
                     <article
                       class="product__card"
                       data-price="59990"
@@ -1155,1006 +1167,1106 @@
                 <!-- Слайд 2 -->
                 <div class="slider__page">
                   <div class="product__cards">
-                    <article
-                      class="product__card"
-                      data-price="59990"
-                      data-rating="4.9"
-                      data-date="2026-08-10"
-                      data-popular="95"
-                    >
-                      <picture class="product__card-image">
-                        <source
-                          srcset="./img/categories/categories-card-1.webp"
-                        />
+                    <div class="product__cards" id="product">
+                      <article
+                        class="product__card"
+                        data-price="59990"
+                        data-rating="4.9"
+                        data-date="2026-08-10"
+                        data-popular="95"
+                      >
+                        <picture class="product__card-image">
+                          <source
+                            srcset="./img/categories/categories-card-1.webp"
+                          />
 
-                        <img
-                          src="./img/categories/categories-card-1.png"
-                          alt="Фен Dyson Supersonic HD07"
-                          class="product__card-img"
-                        />
-                      </picture>
+                          <img
+                            src="./img/categories/categories-card-1.png"
+                            alt="Фен Dyson Supersonic HD07"
+                            class="product__card-img"
+                          />
+                        </picture>
 
-                      <div class="product__card-content">
-                        <h4 class="product__card-title text-light">
-                          Фен Dyson Supersonic HD07 синий медный с 5 насадками в
-                          чехле и расческами
-                        </h4>
+                        <div class="product__card-content">
+                          <h4 class="product__card-title text-light">
+                            Фен Dyson Supersonic HD07 синий медный с 5 насадками
+                            в чехле и расческами
+                          </h4>
 
-                        <div class="product__card-info">
-                          <span class="product__card-availability text-regular">
-                            В наличии
-                          </span>
-                          <span class="product__card-discount text-regular"
-                            >-15%</span
-                          >
-                        </div>
-
-                        <div class="product__card-price">
-                          <span class="product__card-price-current">
-                            59 990P
-                          </span>
-                          <span
-                            class="product__card-price-old"
-                            aria-disabled="false"
-                          >
-                            69 990 P
-                          </span>
-                        </div>
-                      </div>
-
-                      <div class="product__card-actions">
-                        <div class="product__card-counter">
-                          <button
-                            class="product__card-counter-btn counter-btn--minus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="1"
+                          <div class="product__card-info">
+                            <span
+                              class="product__card-availability text-regular"
                             >
-                              <use href="./icons/speaker-sprit.svg#minus"></use>
-                            </svg>
-                          </button>
-
-                          <span class="product__card-count text-regula">1</span>
-                          <button
-                            class="product__card-counter-btn counter-btn--plus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="18"
+                              В наличии
+                            </span>
+                            <span class="product__card-discount text-regular"
+                              >-15%</span
                             >
-                              <use href="./icons/speaker-sprit.svg#plus"></use>
-                            </svg>
-                          </button>
+                          </div>
+
+                          <div class="product__card-price">
+                            <span class="product__card-price-current">
+                              59 990P
+                            </span>
+                            <span
+                              class="product__card-price-old"
+                              aria-disabled="false"
+                            >
+                              69 990 P
+                            </span>
+                          </div>
                         </div>
 
-                        <button class="product__card-button" type="button">
-                          В корзину
-                        </button>
-                      </div>
-                    </article>
-
-                    <article
-                      class="product__card"
-                      data-price="47990"
-                      data-rating="4.7"
-                      data-date="2026-08-05"
-                      data-popular="90"
-                    >
-                      <picture class="product__card-image">
-                        <source
-                          srcset="./img/categories/categories-card-2.webp"
-                        />
-
-                        <img
-                          src="./img/categories/categories-card-2.png"
-                          alt="Фен Dyson Supersonic HD07"
-                          class="product__card-img"
-                        />
-                      </picture>
-
-                      <div class="product__card-content">
-                        <h4 class="product__card-title text-light">
-                          Фен Dyson Supersonic HD07 синий медный с 5 насадками в
-                          чехле и расческами
-                        </h4>
-
-                        <div class="product__card-info">
-                          <span class="product__card-availability text-regular">
-                            В наличии
-                          </span>
-                          <span class="product__card-discount text-regular"
-                            >-15%</span
-                          >
-                        </div>
-
-                        <div class="product__card-price">
-                          <span class="product__card-price-current">
-                            47 990Р
-                          </span>
-                          <span
-                            class="product__card-price-old"
-                            aria-disabled="false"
-                          >
-                            51 990 Р
-                          </span>
-                        </div>
-                      </div>
-
-                      <div class="product__card-actions">
-                        <div class="product__card-counter">
-                          <button
-                            class="product__card-counter-btn counter-btn--minus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="1"
+                        <div class="product__card-actions">
+                          <div class="product__card-counter">
+                            <button
+                              class="product__card-counter-btn counter-btn--minus"
+                              type="button"
                             >
-                              <use href="./icons/speaker-sprit.svg#minus"></use>
-                            </svg>
-                          </button>
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="1"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#minus"
+                                ></use>
+                              </svg>
+                            </button>
 
-                          <span class="product__card-count text-regula">1</span>
-                          <button
-                            class="product__card-counter-btn counter-btn--plus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="18"
+                            <span class="product__card-count text-regula"
+                              >1</span
                             >
-                              <use href="./icons/speaker-sprit.svg#plus"></use>
-                            </svg>
+                            <button
+                              class="product__card-counter-btn counter-btn--plus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="18"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#plus"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <button class="product__card-button" type="button">
+                            В корзину
                           </button>
                         </div>
+                      </article>
 
-                        <button class="product__card-button" type="button">
-                          В корзину
-                        </button>
-                      </div>
-                    </article>
+                      <article
+                        class="product__card"
+                        data-price="47990"
+                        data-rating="4.7"
+                        data-date="2026-08-05"
+                        data-popular="90"
+                      >
+                        <picture class="product__card-image">
+                          <source
+                            srcset="./img/categories/categories-card-2.webp"
+                          />
 
-                    <article
-                      class="product__card"
-                      data-price="46990"
-                      data-rating="4.8"
-                      data-date="2026-08-12"
-                      data-popular="85"
-                    >
-                      <picture class="product__card-image">
-                        <source
-                          srcset="./img/categories/categories-card-3.webp"
-                        />
+                          <img
+                            src="./img/categories/categories-card-2.png"
+                            alt="Фен Dyson Supersonic HD07"
+                            class="product__card-img"
+                          />
+                        </picture>
 
-                        <img
-                          src="./img/categories/categories-card-3.png"
-                          alt="Фен Dyson Supersonic HD07"
-                          class="product__card-img"
-                        />
-                      </picture>
+                        <div class="product__card-content">
+                          <h4 class="product__card-title text-light">
+                            Фен Dyson Supersonic HD07 синий медный с 5 насадками
+                            в чехле и расческами
+                          </h4>
 
-                      <div class="product__card-content">
-                        <h4 class="product__card-title text-light">
-                          Фен Dyson Supersonic HD07 синий медный с 5 насадками в
-                          чехле и расческами
-                        </h4>
-
-                        <div class="product__card-info">
-                          <span class="product__card-availability text-regular">
-                            В наличии
-                          </span>
-                          <span class="product__card-discount text-regular"
-                            >-15%</span
-                          >
-                        </div>
-
-                        <div class="product__card-price">
-                          <span class="product__card-price-current">
-                            46 990Р
-                          </span>
-                          <span
-                            class="product__card-price-old"
-                            aria-disabled="false"
-                          >
-                            51 990 Р
-                          </span>
-                        </div>
-                      </div>
-
-                      <div class="product__card-actions">
-                        <div class="product__card-counter">
-                          <button
-                            class="product__card-counter-btn counter-btn--minus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="1"
+                          <div class="product__card-info">
+                            <span
+                              class="product__card-availability text-regular"
                             >
-                              <use href="./icons/speaker-sprit.svg#minus"></use>
-                            </svg>
-                          </button>
-
-                          <span class="product__card-count text-regula">1</span>
-                          <button
-                            class="product__card-counter-btn counter-btn--plus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="18"
+                              В наличии
+                            </span>
+                            <span class="product__card-discount text-regular"
+                              >-15%</span
                             >
-                              <use href="./icons/speaker-sprit.svg#plus"></use>
-                            </svg>
-                          </button>
+                          </div>
+
+                          <div class="product__card-price">
+                            <span class="product__card-price-current">
+                              47 990Р
+                            </span>
+                            <span
+                              class="product__card-price-old"
+                              aria-disabled="false"
+                            >
+                              51 990 Р
+                            </span>
+                          </div>
                         </div>
 
-                        <button class="product__card-button" type="button">
-                          В корзину
-                        </button>
-                      </div>
-                    </article>
-
-                    <article
-                      class="product__card"
-                      data-price="59990"
-                      data-rating="4.6"
-                      data-date="2026-07-25"
-                      data-popular="80"
-                    >
-                      <picture class="product__card-image">
-                        <source
-                          srcset="./img/categories/categories-card-1.webp"
-                        />
-
-                        <img
-                          src="./img/categories/categories-card-1.png"
-                          alt="Фен Dyson Supersonic HD07"
-                          class="product__card-img"
-                        />
-                      </picture>
-
-                      <div class="product__card-content">
-                        <h4 class="product__card-title text-light">
-                          Фен Dyson Supersonic HD07 синий медный с 5 насадками в
-                          чехле и расческами
-                        </h4>
-
-                        <div class="product__card-info">
-                          <span class="product__card-availability text-regular">
-                            В наличии
-                          </span>
-                          <span class="product__card-discount text-regular"
-                            >-15%</span
-                          >
-                        </div>
-
-                        <div class="product__card-price">
-                          <span class="product__card-price-current">
-                            59 990P
-                          </span>
-                          <span
-                            class="product__card-price-old"
-                            aria-disabled="false"
-                          >
-                            69 990 P
-                          </span>
-                        </div>
-                      </div>
-
-                      <div class="product__card-actions">
-                        <div class="product__card-counter">
-                          <button
-                            class="product__card-counter-btn counter-btn--minus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="1"
+                        <div class="product__card-actions">
+                          <div class="product__card-counter">
+                            <button
+                              class="product__card-counter-btn counter-btn--minus"
+                              type="button"
                             >
-                              <use href="./icons/speaker-sprit.svg#minus"></use>
-                            </svg>
-                          </button>
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="1"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#minus"
+                                ></use>
+                              </svg>
+                            </button>
 
-                          <span class="product__card-count text-regula">1</span>
-                          <button
-                            class="product__card-counter-btn counter-btn--plus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="18"
+                            <span class="product__card-count text-regula"
+                              >1</span
                             >
-                              <use href="./icons/speaker-sprit.svg#plus"></use>
-                            </svg>
+                            <button
+                              class="product__card-counter-btn counter-btn--plus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="18"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#plus"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <button class="product__card-button" type="button">
+                            В корзину
                           </button>
                         </div>
+                      </article>
 
-                        <button class="product__card-button" type="button">
-                          В корзину
-                        </button>
-                      </div>
-                    </article>
+                      <article
+                        class="product__card"
+                        data-price="46990"
+                        data-rating="4.8"
+                        data-date="2026-08-12"
+                        data-popular="85"
+                      >
+                        <picture class="product__card-image">
+                          <source
+                            srcset="./img/categories/categories-card-3.webp"
+                          />
 
-                    <article
-                      class="product__card"
-                      data-price="47990"
-                      data-rating="4.9"
-                      data-date="2026-08-14"
-                      data-popular="98"
-                    >
-                      <picture class="product__card-image">
-                        <source
-                          srcset="./img/categories/categories-card-2.webp"
-                        />
+                          <img
+                            src="./img/categories/categories-card-3.png"
+                            alt="Фен Dyson Supersonic HD07"
+                            class="product__card-img"
+                          />
+                        </picture>
 
-                        <img
-                          src="./img/categories/categories-card-2.png"
-                          alt="Фен Dyson Supersonic HD07"
-                          class="product__card-img"
-                        />
-                      </picture>
+                        <div class="product__card-content">
+                          <h4 class="product__card-title text-light">
+                            Фен Dyson Supersonic HD07 синий медный с 5 насадками
+                            в чехле и расческами
+                          </h4>
 
-                      <div class="product__card-content">
-                        <h4 class="product__card-title text-light">
-                          Фен Dyson Supersonic HD07 синий медный с 5 насадками в
-                          чехле и расческами
-                        </h4>
-
-                        <div class="product__card-info">
-                          <span class="product__card-availability text-regular">
-                            В наличии
-                          </span>
-                          <span class="product__card-discount text-regular"
-                            >-15%</span
-                          >
-                        </div>
-
-                        <div class="product__card-price">
-                          <span class="product__card-price-current">
-                            47 990Р
-                          </span>
-                          <span
-                            class="product__card-price-old"
-                            aria-disabled="false"
-                          >
-                            51 990 Р
-                          </span>
-                        </div>
-                      </div>
-
-                      <div class="product__card-actions">
-                        <div class="product__card-counter">
-                          <button
-                            class="product__card-counter-btn counter-btn--minus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="1"
+                          <div class="product__card-info">
+                            <span
+                              class="product__card-availability text-regular"
                             >
-                              <use href="./icons/speaker-sprit.svg#minus"></use>
-                            </svg>
-                          </button>
-
-                          <span class="product__card-count text-regula">1</span>
-                          <button
-                            class="product__card-counter-btn counter-btn--plus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="18"
+                              В наличии
+                            </span>
+                            <span class="product__card-discount text-regular"
+                              >-15%</span
                             >
-                              <use href="./icons/speaker-sprit.svg#plus"></use>
-                            </svg>
-                          </button>
+                          </div>
+
+                          <div class="product__card-price">
+                            <span class="product__card-price-current">
+                              46 990Р
+                            </span>
+                            <span
+                              class="product__card-price-old"
+                              aria-disabled="false"
+                            >
+                              51 990 Р
+                            </span>
+                          </div>
                         </div>
 
-                        <button class="product__card-button" type="button">
-                          В корзину
-                        </button>
-                      </div>
-                    </article>
-
-                    <article
-                      class="product__card"
-                      data-price="46990"
-                      data-rating="4.5"
-                      data-date="2026-07-30"
-                      data-popular="75"
-                    >
-                      <picture class="product__card-image">
-                        <source
-                          srcset="./img/categories/categories-card-3.webp"
-                        />
-
-                        <img
-                          src="./img/categories/categories-card-3.png"
-                          alt="Фен Dyson Supersonic HD07"
-                          class="product__card-img"
-                        />
-                      </picture>
-
-                      <div class="product__card-content">
-                        <h4 class="product__card-title text-light">
-                          Фен Dyson Supersonic HD07 синий медный с 5 насадками в
-                          чехле и расческами
-                        </h4>
-
-                        <div class="product__card-info">
-                          <span class="product__card-availability text-regular">
-                            В наличии
-                          </span>
-                          <span class="product__card-discount text-regular"
-                            >-15%</span
-                          >
-                        </div>
-
-                        <div class="product__card-price">
-                          <span class="product__card-price-current">
-                            46 990Р
-                          </span>
-                          <span
-                            class="product__card-price-old"
-                            aria-disabled="false"
-                          >
-                            51 990 Р
-                          </span>
-                        </div>
-                      </div>
-
-                      <div class="product__card-actions">
-                        <div class="product__card-counter">
-                          <button
-                            class="product__card-counter-btn counter-btn--minus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="1"
+                        <div class="product__card-actions">
+                          <div class="product__card-counter">
+                            <button
+                              class="product__card-counter-btn counter-btn--minus"
+                              type="button"
                             >
-                              <use href="./icons/speaker-sprit.svg#minus"></use>
-                            </svg>
-                          </button>
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="1"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#minus"
+                                ></use>
+                              </svg>
+                            </button>
 
-                          <span class="product__card-count text-regula">1</span>
-                          <button
-                            class="product__card-counter-btn counter-btn--plus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="18"
+                            <span class="product__card-count text-regula"
+                              >1</span
                             >
-                              <use href="./icons/speaker-sprit.svg#plus"></use>
-                            </svg>
+                            <button
+                              class="product__card-counter-btn counter-btn--plus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="18"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#plus"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <button class="product__card-button" type="button">
+                            В корзину
                           </button>
                         </div>
+                      </article>
 
-                        <button class="product__card-button" type="button">
-                          В корзину
-                        </button>
-                      </div>
-                    </article>
+                      <article
+                        class="product__card"
+                        data-price="59990"
+                        data-rating="4.6"
+                        data-date="2026-07-25"
+                        data-popular="80"
+                      >
+                        <picture class="product__card-image">
+                          <source
+                            srcset="./img/categories/categories-card-1.webp"
+                          />
+
+                          <img
+                            src="./img/categories/categories-card-1.png"
+                            alt="Фен Dyson Supersonic HD07"
+                            class="product__card-img"
+                          />
+                        </picture>
+
+                        <div class="product__card-content">
+                          <h4 class="product__card-title text-light">
+                            Фен Dyson Supersonic HD07 синий медный с 5 насадками
+                            в чехле и расческами
+                          </h4>
+
+                          <div class="product__card-info">
+                            <span
+                              class="product__card-availability text-regular"
+                            >
+                              В наличии
+                            </span>
+                            <span class="product__card-discount text-regular"
+                              >-15%</span
+                            >
+                          </div>
+
+                          <div class="product__card-price">
+                            <span class="product__card-price-current">
+                              59 990P
+                            </span>
+                            <span
+                              class="product__card-price-old"
+                              aria-disabled="false"
+                            >
+                              69 990 P
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="product__card-actions">
+                          <div class="product__card-counter">
+                            <button
+                              class="product__card-counter-btn counter-btn--minus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="1"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#minus"
+                                ></use>
+                              </svg>
+                            </button>
+
+                            <span class="product__card-count text-regula"
+                              >1</span
+                            >
+                            <button
+                              class="product__card-counter-btn counter-btn--plus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="18"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#plus"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <button class="product__card-button" type="button">
+                            В корзину
+                          </button>
+                        </div>
+                      </article>
+
+                      <article
+                        class="product__card"
+                        data-price="47990"
+                        data-rating="4.9"
+                        data-date="2026-08-14"
+                        data-popular="98"
+                      >
+                        <picture class="product__card-image">
+                          <source
+                            srcset="./img/categories/categories-card-2.webp"
+                          />
+
+                          <img
+                            src="./img/categories/categories-card-2.png"
+                            alt="Фен Dyson Supersonic HD07"
+                            class="product__card-img"
+                          />
+                        </picture>
+
+                        <div class="product__card-content">
+                          <h4 class="product__card-title text-light">
+                            Фен Dyson Supersonic HD07 синий медный с 5 насадками
+                            в чехле и расческами
+                          </h4>
+
+                          <div class="product__card-info">
+                            <span
+                              class="product__card-availability text-regular"
+                            >
+                              В наличии
+                            </span>
+                            <span class="product__card-discount text-regular"
+                              >-15%</span
+                            >
+                          </div>
+
+                          <div class="product__card-price">
+                            <span class="product__card-price-current">
+                              47 990Р
+                            </span>
+                            <span
+                              class="product__card-price-old"
+                              aria-disabled="false"
+                            >
+                              51 990 Р
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="product__card-actions">
+                          <div class="product__card-counter">
+                            <button
+                              class="product__card-counter-btn counter-btn--minus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="1"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#minus"
+                                ></use>
+                              </svg>
+                            </button>
+
+                            <span class="product__card-count text-regula"
+                              >1</span
+                            >
+                            <button
+                              class="product__card-counter-btn counter-btn--plus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="18"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#plus"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <button class="product__card-button" type="button">
+                            В корзину
+                          </button>
+                        </div>
+                      </article>
+
+                      <article
+                        class="product__card"
+                        data-price="46990"
+                        data-rating="4.5"
+                        data-date="2026-07-30"
+                        data-popular="75"
+                      >
+                        <picture class="product__card-image">
+                          <source
+                            srcset="./img/categories/categories-card-3.webp"
+                          />
+
+                          <img
+                            src="./img/categories/categories-card-3.png"
+                            alt="Фен Dyson Supersonic HD07"
+                            class="product__card-img"
+                          />
+                        </picture>
+
+                        <div class="product__card-content">
+                          <h4 class="product__card-title text-light">
+                            Фен Dyson Supersonic HD07 синий медный с 5 насадками
+                            в чехле и расческами
+                          </h4>
+
+                          <div class="product__card-info">
+                            <span
+                              class="product__card-availability text-regular"
+                            >
+                              В наличии
+                            </span>
+                            <span class="product__card-discount text-regular"
+                              >-15%</span
+                            >
+                          </div>
+
+                          <div class="product__card-price">
+                            <span class="product__card-price-current">
+                              46 990Р
+                            </span>
+                            <span
+                              class="product__card-price-old"
+                              aria-disabled="false"
+                            >
+                              51 990 Р
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="product__card-actions">
+                          <div class="product__card-counter">
+                            <button
+                              class="product__card-counter-btn counter-btn--minus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="1"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#minus"
+                                ></use>
+                              </svg>
+                            </button>
+
+                            <span class="product__card-count text-regula"
+                              >1</span
+                            >
+                            <button
+                              class="product__card-counter-btn counter-btn--plus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="18"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#plus"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <button class="product__card-button" type="button">
+                            В корзину
+                          </button>
+                        </div>
+                      </article>
+                    </div>
                   </div>
                 </div>
 
                 <!-- Слайд 3 -->
                 <div class="slider__page">
                   <div class="product__cards">
-                    <article
-                      class="product__card"
-                      data-price="59990"
-                      data-rating="4.9"
-                      data-date="2026-08-10"
-                      data-popular="95"
-                    >
-                      <picture class="product__card-image">
-                        <source
-                          srcset="./img/categories/categories-card-1.webp"
-                        />
+                    <div class="product__cards" id="product">
+                      <article
+                        class="product__card"
+                        data-price="59990"
+                        data-rating="4.9"
+                        data-date="2026-08-10"
+                        data-popular="95"
+                      >
+                        <picture class="product__card-image">
+                          <source
+                            srcset="./img/categories/categories-card-1.webp"
+                          />
 
-                        <img
-                          src="./img/categories/categories-card-1.png"
-                          alt="Фен Dyson Supersonic HD07"
-                          class="product__card-img"
-                        />
-                      </picture>
+                          <img
+                            src="./img/categories/categories-card-1.png"
+                            alt="Фен Dyson Supersonic HD07"
+                            class="product__card-img"
+                          />
+                        </picture>
 
-                      <div class="product__card-content">
-                        <h4 class="product__card-title text-light">
-                          Фен Dyson Supersonic HD07 синий медный с 5 насадками в
-                          чехле и расческами
-                        </h4>
+                        <div class="product__card-content">
+                          <h4 class="product__card-title text-light">
+                            Фен Dyson Supersonic HD07 синий медный с 5 насадками
+                            в чехле и расческами
+                          </h4>
 
-                        <div class="product__card-info">
-                          <span class="product__card-availability text-regular">
-                            В наличии
-                          </span>
-                          <span class="product__card-discount text-regular"
-                            >-15%</span
-                          >
-                        </div>
-
-                        <div class="product__card-price">
-                          <span class="product__card-price-current">
-                            59 990P
-                          </span>
-                          <span
-                            class="product__card-price-old"
-                            aria-disabled="false"
-                          >
-                            69 990 P
-                          </span>
-                        </div>
-                      </div>
-
-                      <div class="product__card-actions">
-                        <div class="product__card-counter">
-                          <button
-                            class="product__card-counter-btn counter-btn--minus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="1"
+                          <div class="product__card-info">
+                            <span
+                              class="product__card-availability text-regular"
                             >
-                              <use href="./icons/speaker-sprit.svg#minus"></use>
-                            </svg>
-                          </button>
-
-                          <span class="product__card-count text-regula">1</span>
-                          <button
-                            class="product__card-counter-btn counter-btn--plus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="18"
+                              В наличии
+                            </span>
+                            <span class="product__card-discount text-regular"
+                              >-15%</span
                             >
-                              <use href="./icons/speaker-sprit.svg#plus"></use>
-                            </svg>
-                          </button>
+                          </div>
+
+                          <div class="product__card-price">
+                            <span class="product__card-price-current">
+                              59 990P
+                            </span>
+                            <span
+                              class="product__card-price-old"
+                              aria-disabled="false"
+                            >
+                              69 990 P
+                            </span>
+                          </div>
                         </div>
 
-                        <button class="product__card-button" type="button">
-                          В корзину
-                        </button>
-                      </div>
-                    </article>
-
-                    <article
-                      class="product__card"
-                      data-price="47990"
-                      data-rating="4.7"
-                      data-date="2026-08-05"
-                      data-popular="90"
-                    >
-                      <picture class="product__card-image">
-                        <source
-                          srcset="./img/categories/categories-card-2.webp"
-                        />
-
-                        <img
-                          src="./img/categories/categories-card-2.png"
-                          alt="Фен Dyson Supersonic HD07"
-                          class="product__card-img"
-                        />
-                      </picture>
-
-                      <div class="product__card-content">
-                        <h4 class="product__card-title text-light">
-                          Фен Dyson Supersonic HD07 синий медный с 5 насадками в
-                          чехле и расческами
-                        </h4>
-
-                        <div class="product__card-info">
-                          <span class="product__card-availability text-regular">
-                            В наличии
-                          </span>
-                          <span class="product__card-discount text-regular"
-                            >-15%</span
-                          >
-                        </div>
-
-                        <div class="product__card-price">
-                          <span class="product__card-price-current">
-                            47 990Р
-                          </span>
-                          <span
-                            class="product__card-price-old"
-                            aria-disabled="false"
-                          >
-                            51 990 Р
-                          </span>
-                        </div>
-                      </div>
-
-                      <div class="product__card-actions">
-                        <div class="product__card-counter">
-                          <button
-                            class="product__card-counter-btn counter-btn--minus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="1"
+                        <div class="product__card-actions">
+                          <div class="product__card-counter">
+                            <button
+                              class="product__card-counter-btn counter-btn--minus"
+                              type="button"
                             >
-                              <use href="./icons/speaker-sprit.svg#minus"></use>
-                            </svg>
-                          </button>
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="1"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#minus"
+                                ></use>
+                              </svg>
+                            </button>
 
-                          <span class="product__card-count text-regula">1</span>
-                          <button
-                            class="product__card-counter-btn counter-btn--plus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="18"
+                            <span class="product__card-count text-regula"
+                              >1</span
                             >
-                              <use href="./icons/speaker-sprit.svg#plus"></use>
-                            </svg>
+                            <button
+                              class="product__card-counter-btn counter-btn--plus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="18"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#plus"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <button class="product__card-button" type="button">
+                            В корзину
                           </button>
                         </div>
+                      </article>
 
-                        <button class="product__card-button" type="button">
-                          В корзину
-                        </button>
-                      </div>
-                    </article>
+                      <article
+                        class="product__card"
+                        data-price="47990"
+                        data-rating="4.7"
+                        data-date="2026-08-05"
+                        data-popular="90"
+                      >
+                        <picture class="product__card-image">
+                          <source
+                            srcset="./img/categories/categories-card-2.webp"
+                          />
 
-                    <article
-                      class="product__card"
-                      data-price="46990"
-                      data-rating="4.8"
-                      data-date="2026-08-12"
-                      data-popular="85"
-                    >
-                      <picture class="product__card-image">
-                        <source
-                          srcset="./img/categories/categories-card-3.webp"
-                        />
+                          <img
+                            src="./img/categories/categories-card-2.png"
+                            alt="Фен Dyson Supersonic HD07"
+                            class="product__card-img"
+                          />
+                        </picture>
 
-                        <img
-                          src="./img/categories/categories-card-3.png"
-                          alt="Фен Dyson Supersonic HD07"
-                          class="product__card-img"
-                        />
-                      </picture>
+                        <div class="product__card-content">
+                          <h4 class="product__card-title text-light">
+                            Фен Dyson Supersonic HD07 синий медный с 5 насадками
+                            в чехле и расческами
+                          </h4>
 
-                      <div class="product__card-content">
-                        <h4 class="product__card-title text-light">
-                          Фен Dyson Supersonic HD07 синий медный с 5 насадками в
-                          чехле и расческами
-                        </h4>
-
-                        <div class="product__card-info">
-                          <span class="product__card-availability text-regular">
-                            В наличии
-                          </span>
-                          <span class="product__card-discount text-regular"
-                            >-15%</span
-                          >
-                        </div>
-
-                        <div class="product__card-price">
-                          <span class="product__card-price-current">
-                            46 990Р
-                          </span>
-                          <span
-                            class="product__card-price-old"
-                            aria-disabled="false"
-                          >
-                            51 990 Р
-                          </span>
-                        </div>
-                      </div>
-
-                      <div class="product__card-actions">
-                        <div class="product__card-counter">
-                          <button
-                            class="product__card-counter-btn counter-btn--minus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="1"
+                          <div class="product__card-info">
+                            <span
+                              class="product__card-availability text-regular"
                             >
-                              <use href="./icons/speaker-sprit.svg#minus"></use>
-                            </svg>
-                          </button>
-
-                          <span class="product__card-count text-regula">1</span>
-                          <button
-                            class="product__card-counter-btn counter-btn--plus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="18"
+                              В наличии
+                            </span>
+                            <span class="product__card-discount text-regular"
+                              >-15%</span
                             >
-                              <use href="./icons/speaker-sprit.svg#plus"></use>
-                            </svg>
-                          </button>
+                          </div>
+
+                          <div class="product__card-price">
+                            <span class="product__card-price-current">
+                              47 990Р
+                            </span>
+                            <span
+                              class="product__card-price-old"
+                              aria-disabled="false"
+                            >
+                              51 990 Р
+                            </span>
+                          </div>
                         </div>
 
-                        <button class="product__card-button" type="button">
-                          В корзину
-                        </button>
-                      </div>
-                    </article>
-
-                    <article
-                      class="product__card"
-                      data-price="59990"
-                      data-rating="4.6"
-                      data-date="2026-07-25"
-                      data-popular="80"
-                    >
-                      <picture class="product__card-image">
-                        <source
-                          srcset="./img/categories/categories-card-1.webp"
-                        />
-
-                        <img
-                          src="./img/categories/categories-card-1.png"
-                          alt="Фен Dyson Supersonic HD07"
-                          class="product__card-img"
-                        />
-                      </picture>
-
-                      <div class="product__card-content">
-                        <h4 class="product__card-title text-light">
-                          Фен Dyson Supersonic HD07 синий медный с 5 насадками в
-                          чехле и расческами
-                        </h4>
-
-                        <div class="product__card-info">
-                          <span class="product__card-availability text-regular">
-                            В наличии
-                          </span>
-                          <span class="product__card-discount text-regular"
-                            >-15%</span
-                          >
-                        </div>
-
-                        <div class="product__card-price">
-                          <span class="product__card-price-current">
-                            59 990P
-                          </span>
-                          <span
-                            class="product__card-price-old"
-                            aria-disabled="false"
-                          >
-                            69 990 P
-                          </span>
-                        </div>
-                      </div>
-
-                      <div class="product__card-actions">
-                        <div class="product__card-counter">
-                          <button
-                            class="product__card-counter-btn counter-btn--minus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="1"
+                        <div class="product__card-actions">
+                          <div class="product__card-counter">
+                            <button
+                              class="product__card-counter-btn counter-btn--minus"
+                              type="button"
                             >
-                              <use href="./icons/speaker-sprit.svg#minus"></use>
-                            </svg>
-                          </button>
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="1"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#minus"
+                                ></use>
+                              </svg>
+                            </button>
 
-                          <span class="product__card-count text-regula">1</span>
-                          <button
-                            class="product__card-counter-btn counter-btn--plus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="18"
+                            <span class="product__card-count text-regula"
+                              >1</span
                             >
-                              <use href="./icons/speaker-sprit.svg#plus"></use>
-                            </svg>
+                            <button
+                              class="product__card-counter-btn counter-btn--plus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="18"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#plus"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <button class="product__card-button" type="button">
+                            В корзину
                           </button>
                         </div>
+                      </article>
 
-                        <button class="product__card-button" type="button">
-                          В корзину
-                        </button>
-                      </div>
-                    </article>
+                      <article
+                        class="product__card"
+                        data-price="46990"
+                        data-rating="4.8"
+                        data-date="2026-08-12"
+                        data-popular="85"
+                      >
+                        <picture class="product__card-image">
+                          <source
+                            srcset="./img/categories/categories-card-3.webp"
+                          />
 
-                    <article
-                      class="product__card"
-                      data-price="47990"
-                      data-rating="4.9"
-                      data-date="2026-08-14"
-                      data-popular="98"
-                    >
-                      <picture class="product__card-image">
-                        <source
-                          srcset="./img/categories/categories-card-2.webp"
-                        />
+                          <img
+                            src="./img/categories/categories-card-3.png"
+                            alt="Фен Dyson Supersonic HD07"
+                            class="product__card-img"
+                          />
+                        </picture>
 
-                        <img
-                          src="./img/categories/categories-card-2.png"
-                          alt="Фен Dyson Supersonic HD07"
-                          class="product__card-img"
-                        />
-                      </picture>
+                        <div class="product__card-content">
+                          <h4 class="product__card-title text-light">
+                            Фен Dyson Supersonic HD07 синий медный с 5 насадками
+                            в чехле и расческами
+                          </h4>
 
-                      <div class="product__card-content">
-                        <h4 class="product__card-title text-light">
-                          Фен Dyson Supersonic HD07 синий медный с 5 насадками в
-                          чехле и расческами
-                        </h4>
-
-                        <div class="product__card-info">
-                          <span class="product__card-availability text-regular">
-                            В наличии
-                          </span>
-                          <span class="product__card-discount text-regular"
-                            >-15%</span
-                          >
-                        </div>
-
-                        <div class="product__card-price">
-                          <span class="product__card-price-current">
-                            47 990Р
-                          </span>
-                          <span
-                            class="product__card-price-old"
-                            aria-disabled="false"
-                          >
-                            51 990 Р
-                          </span>
-                        </div>
-                      </div>
-
-                      <div class="product__card-actions">
-                        <div class="product__card-counter">
-                          <button
-                            class="product__card-counter-btn counter-btn--minus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="1"
+                          <div class="product__card-info">
+                            <span
+                              class="product__card-availability text-regular"
                             >
-                              <use href="./icons/speaker-sprit.svg#minus"></use>
-                            </svg>
-                          </button>
-
-                          <span class="product__card-count text-regula">1</span>
-                          <button
-                            class="product__card-counter-btn counter-btn--plus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="18"
+                              В наличии
+                            </span>
+                            <span class="product__card-discount text-regular"
+                              >-15%</span
                             >
-                              <use href="./icons/speaker-sprit.svg#plus"></use>
-                            </svg>
-                          </button>
+                          </div>
+
+                          <div class="product__card-price">
+                            <span class="product__card-price-current">
+                              46 990Р
+                            </span>
+                            <span
+                              class="product__card-price-old"
+                              aria-disabled="false"
+                            >
+                              51 990 Р
+                            </span>
+                          </div>
                         </div>
 
-                        <button class="product__card-button" type="button">
-                          В корзину
-                        </button>
-                      </div>
-                    </article>
-
-                    <article
-                      class="product__card"
-                      data-price="46990"
-                      data-rating="4.5"
-                      data-date="2026-07-30"
-                      data-popular="75"
-                    >
-                      <picture class="product__card-image">
-                        <source
-                          srcset="./img/categories/categories-card-3.webp"
-                        />
-
-                        <img
-                          src="./img/categories/categories-card-3.png"
-                          alt="Фен Dyson Supersonic HD07"
-                          class="product__card-img"
-                        />
-                      </picture>
-
-                      <div class="product__card-content">
-                        <h4 class="product__card-title text-light">
-                          Фен Dyson Supersonic HD07 синий медный с 5 насадками в
-                          чехле и расческами
-                        </h4>
-
-                        <div class="product__card-info">
-                          <span class="product__card-availability text-regular">
-                            В наличии
-                          </span>
-                          <span class="product__card-discount text-regular"
-                            >-15%</span
-                          >
-                        </div>
-
-                        <div class="product__card-price">
-                          <span class="product__card-price-current">
-                            46 990Р
-                          </span>
-                          <span
-                            class="product__card-price-old"
-                            aria-disabled="false"
-                          >
-                            51 990 Р
-                          </span>
-                        </div>
-                      </div>
-
-                      <div class="product__card-actions">
-                        <div class="product__card-counter">
-                          <button
-                            class="product__card-counter-btn counter-btn--minus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="1"
+                        <div class="product__card-actions">
+                          <div class="product__card-counter">
+                            <button
+                              class="product__card-counter-btn counter-btn--minus"
+                              type="button"
                             >
-                              <use href="./icons/speaker-sprit.svg#minus"></use>
-                            </svg>
-                          </button>
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="1"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#minus"
+                                ></use>
+                              </svg>
+                            </button>
 
-                          <span class="product__card-count text-regula">1</span>
-                          <button
-                            class="product__card-counter-btn counter-btn--plus"
-                            type="button"
-                          >
-                            <svg
-                              class="product__card-icon"
-                              width="18"
-                              height="18"
+                            <span class="product__card-count text-regula"
+                              >1</span
                             >
-                              <use href="./icons/speaker-sprit.svg#plus"></use>
-                            </svg>
+                            <button
+                              class="product__card-counter-btn counter-btn--plus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="18"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#plus"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <button class="product__card-button" type="button">
+                            В корзину
                           </button>
                         </div>
+                      </article>
 
-                        <button class="product__card-button" type="button">
-                          В корзину
-                        </button>
-                      </div>
-                    </article>
+                      <article
+                        class="product__card"
+                        data-price="59990"
+                        data-rating="4.6"
+                        data-date="2026-07-25"
+                        data-popular="80"
+                      >
+                        <picture class="product__card-image">
+                          <source
+                            srcset="./img/categories/categories-card-1.webp"
+                          />
+
+                          <img
+                            src="./img/categories/categories-card-1.png"
+                            alt="Фен Dyson Supersonic HD07"
+                            class="product__card-img"
+                          />
+                        </picture>
+
+                        <div class="product__card-content">
+                          <h4 class="product__card-title text-light">
+                            Фен Dyson Supersonic HD07 синий медный с 5 насадками
+                            в чехле и расческами
+                          </h4>
+
+                          <div class="product__card-info">
+                            <span
+                              class="product__card-availability text-regular"
+                            >
+                              В наличии
+                            </span>
+                            <span class="product__card-discount text-regular"
+                              >-15%</span
+                            >
+                          </div>
+
+                          <div class="product__card-price">
+                            <span class="product__card-price-current">
+                              59 990P
+                            </span>
+                            <span
+                              class="product__card-price-old"
+                              aria-disabled="false"
+                            >
+                              69 990 P
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="product__card-actions">
+                          <div class="product__card-counter">
+                            <button
+                              class="product__card-counter-btn counter-btn--minus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="1"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#minus"
+                                ></use>
+                              </svg>
+                            </button>
+
+                            <span class="product__card-count text-regula"
+                              >1</span
+                            >
+                            <button
+                              class="product__card-counter-btn counter-btn--plus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="18"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#plus"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <button class="product__card-button" type="button">
+                            В корзину
+                          </button>
+                        </div>
+                      </article>
+
+                      <article
+                        class="product__card"
+                        data-price="47990"
+                        data-rating="4.9"
+                        data-date="2026-08-14"
+                        data-popular="98"
+                      >
+                        <picture class="product__card-image">
+                          <source
+                            srcset="./img/categories/categories-card-2.webp"
+                          />
+
+                          <img
+                            src="./img/categories/categories-card-2.png"
+                            alt="Фен Dyson Supersonic HD07"
+                            class="product__card-img"
+                          />
+                        </picture>
+
+                        <div class="product__card-content">
+                          <h4 class="product__card-title text-light">
+                            Фен Dyson Supersonic HD07 синий медный с 5 насадками
+                            в чехле и расческами
+                          </h4>
+
+                          <div class="product__card-info">
+                            <span
+                              class="product__card-availability text-regular"
+                            >
+                              В наличии
+                            </span>
+                            <span class="product__card-discount text-regular"
+                              >-15%</span
+                            >
+                          </div>
+
+                          <div class="product__card-price">
+                            <span class="product__card-price-current">
+                              47 990Р
+                            </span>
+                            <span
+                              class="product__card-price-old"
+                              aria-disabled="false"
+                            >
+                              51 990 Р
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="product__card-actions">
+                          <div class="product__card-counter">
+                            <button
+                              class="product__card-counter-btn counter-btn--minus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="1"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#minus"
+                                ></use>
+                              </svg>
+                            </button>
+
+                            <span class="product__card-count text-regula"
+                              >1</span
+                            >
+                            <button
+                              class="product__card-counter-btn counter-btn--plus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="18"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#plus"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <button class="product__card-button" type="button">
+                            В корзину
+                          </button>
+                        </div>
+                      </article>
+
+                      <article
+                        class="product__card"
+                        data-price="46990"
+                        data-rating="4.5"
+                        data-date="2026-07-30"
+                        data-popular="75"
+                      >
+                        <picture class="product__card-image">
+                          <source
+                            srcset="./img/categories/categories-card-3.webp"
+                          />
+
+                          <img
+                            src="./img/categories/categories-card-3.png"
+                            alt="Фен Dyson Supersonic HD07"
+                            class="product__card-img"
+                          />
+                        </picture>
+
+                        <div class="product__card-content">
+                          <h4 class="product__card-title text-light">
+                            Фен Dyson Supersonic HD07 синий медный с 5 насадками
+                            в чехле и расческами
+                          </h4>
+
+                          <div class="product__card-info">
+                            <span
+                              class="product__card-availability text-regular"
+                            >
+                              В наличии
+                            </span>
+                            <span class="product__card-discount text-regular"
+                              >-15%</span
+                            >
+                          </div>
+
+                          <div class="product__card-price">
+                            <span class="product__card-price-current">
+                              46 990Р
+                            </span>
+                            <span
+                              class="product__card-price-old"
+                              aria-disabled="false"
+                            >
+                              51 990 Р
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="product__card-actions">
+                          <div class="product__card-counter">
+                            <button
+                              class="product__card-counter-btn counter-btn--minus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="1"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#minus"
+                                ></use>
+                              </svg>
+                            </button>
+
+                            <span class="product__card-count text-regula"
+                              >1</span
+                            >
+                            <button
+                              class="product__card-counter-btn counter-btn--plus"
+                              type="button"
+                            >
+                              <svg
+                                class="product__card-icon"
+                                width="18"
+                                height="18"
+                              >
+                                <use
+                                  href="./icons/speaker-sprit.svg#plus"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <button class="product__card-button" type="button">
+                            В корзину
+                          </button>
+                        </div>
+                      </article>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2290,7 +2402,9 @@
                   </a>
                 </div>
 
-                <a class="about__photos-link" href="#"> Смотреть все фото </a>
+                <button class="about__photos-link" href="/">
+                  Смотреть все фото
+                </button>
               </div>
 
               <time class="about__date" datetime="2022-05-21">
@@ -2352,7 +2466,9 @@
                   </a>
                 </div>
 
-                <a class="about__photos-link" href="#"> Смотреть все фото </a>
+                <button class="about__photos-link" href="#">
+                  Смотреть все фото
+                </button>
               </div>
 
               <time class="about__date" datetime="2022-05-21">
@@ -2394,7 +2510,9 @@
                   </a>
                 </div>
 
-                <a class="about__photos-link" href="#"> Смотреть все фото </a>
+                <button class="about__photos-link" href="#">
+                  Смотреть все фото
+                </button>
               </div>
 
               <time class="about__date" datetime="2022-05-21">
@@ -2436,7 +2554,9 @@
                   </a>
                 </div>
 
-                <a class="about__photos-link" href="#"> Смотреть все фото </a>
+                <button class="about__photos-link" href="#">
+                  Смотреть все фото
+                </button>
               </div>
 
               <time class="about__date" datetime="2022-05-21">
@@ -2446,7 +2566,7 @@
           </ul>
 
           <button class="more__btn" type="button" aria-label="Показать еще">
-            Показать еще
+            <span>Показать еще</span>
             <svg class="more__svg" width="30" height="30">
               <use class="more__icon" href="./icons/about-more.svg#more"></use>
             </svg>
@@ -2749,41 +2869,15 @@
                 <a href="#" class="news__card-link">Читать далее</a>
               </article>
             </li>
-
-            <li class="news__item news__item--hidden">
-              <article class="news__card">
-                <picture class="news__card-images">
-                  <source srcset="./img/news.webp" />
-                  <img
-                    width="440"
-                    height="294"
-                    class="news__card-img"
-                    src="./img/news.png"
-                    alt="Фены Dyson"
-                  />
-                </picture>
-
-                <time class="news__card-date" datetime="2022-09-21">
-                  21 сентября 2022
-                </time>
-
-                <h2 class="news__card-title">
-                  Есть ли безопасные выпрямители для волос
-                </h2>
-
-                <p class="news__card-desc">
-                  Добавьте объем и рельеф коротким волосам. Посмотрите, как
-                  создать мягкие, легкие локоны и волны на коротких волосах и
-                  волосах средней длины
-                </p>
-
-                <a href="#" class="news__card-link">Читать далее</a>
-              </article>
-            </li>
           </ul>
 
-          <button class="more__btn" type="button" aria-label="Показать еще">
-            Показать еще
+          <button
+            id="more__button"
+            class="more__btn"
+            type="button"
+            aria-label="Показать еще"
+          >
+            <span>Показать еще</span>
             <svg class="more__svg" width="30" height="30">
               <use class="more__icon" href="./icons/about-more.svg#more"></use>
             </svg>
@@ -2863,7 +2957,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container footer__container">
         <div class="footer__top">
           <a href="#" class="footer__logo logo">
